@@ -7,21 +7,17 @@
 }
 
 p {
-  font-weight:400;
-  color: black;
-  text-decoration:solid;
-}
-h2{
-   padding-top: 30px;
-   color: #fb911f;
-   font-size: 80px;
-   text-shadow: 0 0 0.3em black, 0 0 0.8em #fb911f;
-}
-.ppropos{
   font-weight: 400;
-  color: white;
+  color: black;
   text-decoration: solid;
 }
+h2 {
+  padding-top: 30px;
+  color: #fb911f;
+  font-size: 80px;
+  text-shadow: 0 0 0.3em black, 0 0 0.8em #fb911f;
+}
+
 header {
   position: fixed;
   top: 0%;
@@ -46,9 +42,8 @@ header.sticky .logo {
 header.sticky .navbar li a {
   color: #fb911f;
 }
-header img{
+header img {
   width: 10%;
- 
 }
 
 .navbar {
@@ -77,21 +72,20 @@ header .navbar li a:hover {
   justify-content: center;
   align-items: flex-start;
   background-image: url(./images/capsule.jpeg);
-  background-size:auto;
+  background-size: auto;
 }
-
 
 .bannière .contenu {
   max-width: 70%;
   text-align: center;
 }
 .bannière .contenu h2 {
-  font-size:80px;
+  font-size: 80px;
   color: #fb911f;
   text-transform: capitalize;
   text-shadow: 0 0 0.3em black, 0 0 0.8em #fb911f;
 }
-.bannière .contact h2:hover{
+.bannière .contact h2:hover {
   letter-spacing: 3px;
 }
 
@@ -129,13 +123,12 @@ header .navbar li a:hover {
   letter-spacing: 4px;
 }
 
-  
-.btnprojet{
+.btnprojet {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
-.btn{
+.btn {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -156,21 +149,51 @@ section {
   background-image: url(./images/az.jpg);
   background-size: cover;
 }
+.apropos .conteneur {
+  display: flex;
+  flex-direction: row;
+  height: 300px;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: nowrap;
+  margin-top: 40px;
+
+}
+.apropos .conteneur .box {
+  width: 25%;
+  height: 250px;
+  padding-top: 50px;
+  margin-top: 20px;
+  border: 0px solid rgb(255, 255, 255);
+  margin: 10px;
+  box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.8);
+}
+.apropos .conteneur .box:hover {
+  border: 1px solid lightblue;
+  box-shadow: 2px 5px 8px lightblue;
+}
+.apropos .conteneur .box h4 {
+  color: #fb911f;
+  padding: 5px;
+}
+.apropos .conteneur .box p{
+  padding: 5px;
+  text-align: left;
+  font-size: medium;
+}
 .conteneur {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
 }
 
 .titre-texte {
-    color: #fb911f;
-    font-size: 60px;
-    text-shadow: 0 0 0.3em black, 0 0 0.8em #fb911f;
-
+  color: #fb911f;
+  font-size: 60px;
+  text-shadow: 0 0 0.3em black, 0 0 0.8em #fb911f;
 }
-
 
 /* Patie Projet  */
 .titre {
@@ -194,9 +217,9 @@ section {
   display: flex;
   flex-direction: row;
   height: 300px;
-   width: 100%;
+  width: 100%;
   justify-content: center;
-  flex-wrap:nowrap;
+  flex-wrap: nowrap;
   margin-top: 40px;
 }
 .projet .contenu .box {
@@ -210,11 +233,10 @@ section {
 .projet .contenu .box p {
   visibility: hidden;
   margin: 15px;
-
 }
-.projet .contenu .box:hover p{
+.projet .contenu .box:hover p {
   visibility: visible;
-  text-align:start;
+  text-align: start;
   color: #fff;
 }
 .projet .contenu .box:hover {
@@ -224,7 +246,6 @@ section {
   height: 350px;
   margin-top: 20px;
   margin: 10px;
-  
 }
 .projet .contenu .box .imbox {
   position: relative;
@@ -255,9 +276,9 @@ section {
   display: flex;
   flex-direction: row;
   height: 300px;
-   width: 100%;
+  width: 100%;
   justify-content: center;
-  flex-wrap:nowrap;
+  flex-wrap: nowrap;
   margin-top: 40px;
 }
 .projet2 .contenu .box {
@@ -271,11 +292,10 @@ section {
 .projet2 .contenu .box p {
   visibility: hidden;
   margin: 15px;
-
 }
-.projet2 .contenu .box:hover p{
+.projet2 .contenu .box:hover p {
   visibility: visible;
-  text-align:start;
+  text-align: start;
   color: #fff;
 }
 .projet2 .contenu .box:hover {
@@ -285,7 +305,6 @@ section {
   height: 300px;
   margin-top: 20px;
   margin: 10px;
-  
 }
 .projet2 .contenu .box .imbox {
   position: relative;
@@ -307,7 +326,7 @@ section {
 }
 
 .contact {
-  height: 800Px;
+  height: 800px;
   background-image: url(./images/op.jpeg);
   background-size: cover;
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.8);
@@ -335,7 +354,6 @@ section {
   margin-bottom: 20px;
 }
 
-
 .copyright {
   padding: 20px;
   border-top: 2px solid rgba(0, 0, 0, 0.1);
@@ -352,6 +370,3 @@ section {
 }
 
 /* Responsive */
-@media only screen and (min-width: 800px) and (max-width: 966px){
-/*style petites-moyennes tablettes */
-}
