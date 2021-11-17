@@ -1,0 +1,357 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+p {
+  font-weight:400;
+  color: black;
+  text-decoration:solid;
+}
+h2{
+   padding-top: 30px;
+   color: #fb911f;
+   font-size: 80px;
+   text-shadow: 0 0 0.3em black, 0 0 0.8em #fb911f;
+}
+.ppropos{
+  font-weight: 400;
+  color: white;
+  text-decoration: solid;
+}
+header {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  padding: 20px;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  transition: 0.5s;
+}
+header.sticky {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 10px 10px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
+}
+header.sticky .logo {
+  color: black;
+}
+
+header.sticky .navbar li a {
+  color: #fb911f;
+}
+header img{
+  width: 10%;
+ 
+}
+
+.navbar {
+  display: flex;
+  position: relative;
+}
+.navbar li {
+  list-style: none;
+}
+.navbar a {
+  color: black;
+  text-decoration: none;
+  margin-left: 30px;
+  font-weight: 700;
+}
+header .navbar li a:hover {
+  color: #fb911f;
+  border-bottom: 2px solid #fb911f;
+}
+.bannière {
+  position: relative;
+  width: 100%;
+  height: 590px;
+  padding-top: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-image: url(./images/capsule.jpeg);
+  background-size:auto;
+}
+
+
+.bannière .contenu {
+  max-width: 70%;
+  text-align: center;
+}
+.bannière .contenu h2 {
+  font-size:80px;
+  color: #fb911f;
+  text-transform: capitalize;
+  text-shadow: 0 0 0.3em black, 0 0 0.8em #fb911f;
+}
+.bannière .contact h2:hover{
+  letter-spacing: 3px;
+}
+
+.btn1 {
+  font-size: 1rem;
+  color: #fff;
+  background-color: black;
+  padding: 10px 20px;
+  display: inline-block;
+  margin-top: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  transition: 0.5s;
+  margin-left: 10px;
+}
+.btn2 {
+  font-size: 1rem;
+  color: #fff;
+  background-color: #fb911f;
+  padding: 10px 20px;
+  display: inline-block;
+  margin-top: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  transition: 0.5s;
+  margin-left: 10px;
+}
+
+.btn1:hover {
+  letter-spacing: 4px;
+}
+.btn2:hover {
+  letter-spacing: 4px;
+}
+
+  
+.btnprojet{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.btn{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+section {
+  padding: 100px;
+}
+
+/* partie a propos*/
+
+.apropos {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  height: 590px;
+  background-image: url(./images/az.jpg);
+  background-size: cover;
+}
+.conteneur {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content:center;
+  align-items: center;
+}
+
+.titre-texte {
+    color: #fb911f;
+    font-size: 60px;
+    text-shadow: 0 0 0.3em black, 0 0 0.8em #fb911f;
+
+}
+
+
+/* Patie Projet  */
+.titre {
+  position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.projet {
+  background-image: url(./images/az.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 690px;
+  margin-bottom: 100px;
+}
+
+.projet .contenu {
+  display: flex;
+  flex-direction: row;
+  height: 300px;
+   width: 100%;
+  justify-content: center;
+  flex-wrap:nowrap;
+  margin-top: 40px;
+}
+.projet .contenu .box {
+  width: 30%;
+  height: 250px;
+  margin-top: 20px;
+  border: 0px solid rgba(255, 255, 255, 0);
+  margin: 10px;
+  box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.8);
+}
+.projet .contenu .box p {
+  visibility: hidden;
+  margin: 15px;
+
+}
+.projet .contenu .box:hover p{
+  visibility: visible;
+  text-align:start;
+  color: #fff;
+}
+.projet .contenu .box:hover {
+  width: 32%;
+  border: 1px solid lightblue;
+  box-shadow: 2px 5px 8px lightblue;
+  height: 350px;
+  margin-top: 20px;
+  margin: 10px;
+  
+}
+.projet .contenu .box .imbox {
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+.projet .contenu .box .imbox img {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.projet .contenu .box .text {
+  text-align: center;
+  font-weight: 300;
+  color: white;
+}
+.projet2 {
+  background-image: url(./images/az.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 690px;
+  margin-top: -100px;
+}
+.projet2 .contenu {
+  display: flex;
+  flex-direction: row;
+  height: 300px;
+   width: 100%;
+  justify-content: center;
+  flex-wrap:nowrap;
+  margin-top: 40px;
+}
+.projet2 .contenu .box {
+  width: 20%;
+  height: 250px;
+  margin-top: 20px;
+  border: 0px solid rgba(255, 255, 255, 0);
+  margin: 10px;
+  box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.8);
+}
+.projet2 .contenu .box p {
+  visibility: hidden;
+  margin: 15px;
+
+}
+.projet2 .contenu .box:hover p{
+  visibility: visible;
+  text-align:start;
+  color: #fff;
+}
+.projet2 .contenu .box:hover {
+  width: 20%;
+  border: 1px solid lightblue;
+  box-shadow: 2px 5px 8px lightblue;
+  height: 300px;
+  margin-top: 20px;
+  margin: 10px;
+  
+}
+.projet2 .contenu .box .imbox {
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+.projet2 .contenu .box .imbox img {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.projet2 .contenu .box .text {
+  text-align: center;
+  font-weight: 300;
+  color: white;
+}
+
+.contact {
+  height: 800Px;
+  background-image: url(./images/op.jpeg);
+  background-size: cover;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.8);
+  width: 100%;
+  background-position: unset;
+}
+.contactForm {
+  padding: 10px 5px;
+  background-color: rgba(255, 255, 255, 0.233);
+  box-shadow: 5px 15px 50px rgba(0, 0, 0, 0.8);
+  max-width: 400px;
+  margin-top: 100px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30%;
+}
+.contactForm .inputboite {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.contactForm h3 {
+  color: black;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+
+.copyright {
+  padding: 20px;
+  border-top: 2px solid rgba(0, 0, 0, 0.1);
+  background: rgba(228, 222, 222, 0.1);
+  text-align: center;
+}
+.copyright p:nth-child(1) {
+  color: #333;
+}
+.copyright a {
+  color: #fb911f;
+  font-weight: 600;
+  font-style: italic;
+}
+
+/* Responsive */
+@media only screen and (min-width: 800px) and (max-width: 966px){
+/*style petites-moyennes tablettes */
+}
