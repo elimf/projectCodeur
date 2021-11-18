@@ -616,7 +616,7 @@ section {
     align-items: flex-start;
   }
 }
-@media only screen and (max-width: 399px) {
+@media only screen and (min-width: 100px) and (max-width: 399px) {
   p {
     font-size: 8px;
   }
@@ -728,8 +728,6 @@ section {
     border: 1px solid lightblue;
     box-shadow: 2px 5px 8px lightblue;
     height: 400px;
-    margin-top: 20px;
-    margin: 10px;
   }
   .projet p {
     text-align: left;
