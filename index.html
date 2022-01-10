@@ -4,200 +4,586 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="index.css" rel="stylesheet" />
+    <title>Florvil</title>
     <link
-      rel="shortcut icon"
-      href="./images/boussole.jpeg"
-      type="image/x-icon"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
     />
-    <script src="script.js" defer></script>
-    <title>Codeur&Co</title>
-  </head>
+     <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="style.css">
 
-  <body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/14273d579a.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./main.js" defer></script>
+  </head>
+  <nav class="navbar navbar-expand-md bg-light navbar-light fixed-top">
+    <div class="container">
+        <a class="navbar-brand text-uppercase fw-bold" href="/index.html">
+            <span class="bg-primary bg-gradient p-1 rounded-3 text-light">Elim</span> Florvil
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+</button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="#johndoe">Qui suis-je ?</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#expertise">Expertises</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#portfolio">Portfolio</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+        </li>
+    </ul>
+</div>
+  </div>
+</nav>
+  <body >
+    <a
+      href="../index.html"
+      class="btn bg-primary text-white position-fixed mt-3 ms-3"
+      data-bs-toggle="tooltip"
+      data-bs-placement="right"
+      title="Ne pas inclure dans l'intégration"
+      >Retour</a
+    >
     <header>
-      <img src="./images/logo.png" id="logo"" alt="Logo Codeur&Co">
-      <ul class="navbar1">
-        <li><a href="#bannière">Accueil</a></li>
-        <li><a href="#apropos">A Propos de Moi</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <ul class="navbar">
-        <li><a href="#bannière">Accueil</a></li>
-        <li><a href="#apropos">A Propos de Moi</a></li>
-        <li><a class="navprojet" href="#projet">Mes Projets</a></li>
-        <li><a class="navprojet" href="#projet2">Mes Projets à venir</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+      <nav class="bg-light">
+        <div class="container">
+          <div class="bg-secondary py-4 w-100"></div>
+        </div>
+      </nav>
     </header>
 
-    <section class="bannière" id="bannière">
-      <div class="contenu">
-        <h2 class="titre-Accueil">Accueil</h2>
+<!-- -----------------------------------------------------
 
-        <a href="#projet" class="btn1">Mes Projets</a>
-        <a href="#projet2" class="btn2">Mes Projets à venir</a>
-      </div>
-    </section>
+                                Présentation
 
-    <section class="apropos" id="apropos">
-      <div class="titre">
-        <h2 class="titre-texte">A propos de Moi</h2>
-        
-      </div>
+------------------------------------------------------------>
+      <section  id="johndoe" class="py-5">
+        <div class="container">
+          <div class="row align-items-center gy-4">
+            <div class="col-12 col-md-6">
+              <h1 class="fw-bold">
+                Je suis Elim Florvil Développeur Web
+              </h1>
+              <h2 class="fw-light">Bienvenue dans mon univers créatif</h2>
+              <button class="btn btn-primary mt-5">Mon expertise Web</button>
+            </div>
+            <div class="col-12 col-md-6">
+              <img src="./img/home.jpeg" alt="John Doe" width="100%" />
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <div class="conteneur">
-        <div class="box">
-          <h4>Développement Web</h4>
-          <p>
-            En me questionnant sur la structure des sites web, j’ai fini par
-            coder mon premier site web en <strong>HTML/CSS</strong>.
-          </p>
-        </div>
-        <div class="box">
-          <h4>Application Orientée Objet</h4>
-          <p>
-            Souhaitant concevoir des applications et des logiciels, j'ai
-            entrepris des projets en <strong>Python</strong> et
-            <strong>Java</strong>.
-          </p>
-        </div>
-      </div>
-    </section>
+<!-- -----------------------------------------------------
 
-    <section class="projet" id="projet">
-      <div class="titre">
-        <h2 class="titre-texte">Mes Projets</h2>
-      </div>
+                                Compétences
 
-      <div class="contenu">
-        <div class="box">
-          <div class="imbox">
-            <img src="./images/destruct.jpg" alt="" />
-          </div>
-          <div class="text">
-            <h3>Destruct Chess</h3>
-            <p>
-              Jeu en Java. Opposant deux joueurs, le gagnant étant la personne
-              qui peut encore se déplacer après l'attaque de son opposant.
-            </p>
-          </div>
-        </div>
-        <div class="box">
-          <div class="imbox">
-            <img src="./images/typing-keyboard.gif" alt="" />
-          </div>
-          <div class="text">
-            <h3>Formulaire</h3>
-            <p>Refonte du formulaire d'inscription d'Itescia en HTML,CSS</p>
-          </div>
-        </div>
-        <div class="box">
-          <div class="imbox">
-            <img src="./images/shop.jpeg" alt="" />
-          </div>
-          <div class="text">
-            <h3>Coding Shop</h3>
-            <p>
-              Vitrine de e-commerce en HTML CSS et JavaScript pour l'achat de
-              cours sur différents langages informatiques.
-            </p>
-          </div>
-        </div>
-        <div class="box">
-          <div class="imbox">
-            <img src="./images/filters.jpeg" alt="" />
-          </div>
-          <div class="text">
-            <h3>Photo Filters</h3>
-            <p>Logiciels de filtres en ligne de commande en Java.</p>
-          </div>
-        </div>
-        <div class="box">
-          <div class="imbox">
-            <img src="./images/fantasy.jpeg" alt="" />
-          </div>
-          <div class="text">
-            <h3>Start Fantasy</h3>
-            <p>
-              Jeu en Java. Opposant deux joueurs, le gagnant étant celui qui
-              survie à l'assaut de son oppossant à la fin du combat.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+------------------------------------------------------------>
+      <section id="expertise" class="py-5 bg-light">
+        <div class="container">
+          <h2>Mon expertise</h2>
+          <h3>Développement web et design</h3>
+          <!-- Developpement -->
+          <div class="row gy-4 mt-5">
+            <div class="col-12 col-md-7">
+                 <!-- Progress bar -->
+            <div class="mb-3 p-3 bg-white">
+              <div class="row align-items-center">
+                <div class="col-5 col-sm-4 col-lg-3 col-xl-2">
+                  <div class="d-flex align-items-center">
+                    <i class="fab fa-html5 fa-2x me-3 text-primary"></i>
+                    <p class="fw-bold m-0">HTML5</p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="progress"data-bs-toggle="tooltip" title="100%">
+                    <div class="progress-bar w-100" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                         aria-valuemax="100">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-    <section class="projet2" id="projet2">
-      <div class="titre">
-        <h2 class="titre-texte">Mes Projets à venir</h2>
-      </div>
-      
+            <div class="mb-3 p-3 bg-white">
+              <div class="row align-items-center">
+                <div class="col-5 col-sm-4 col-lg-3 col-xl-2">
+                  <div class="d-flex align-items-center">
+                    <i class="fab fa-css3-alt fa-2x me-3 text-primary"></i>
+                    <p class="fw-bold m-0">CSS3</p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="progress" data-bs-toggle="tooltip" title="100%" >
+                    <div class="progress-bar w-100" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                         aria-valuemax="100">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-      <div class="contenu">
-        <div class="box">
-          <div class="imbox">
-            <img src="./images/globe.gif" alt=" gif globre qui tourne" />
-          </div>
-          <div class="text">
-            <h3>Site Web</h3>
-            <p>Site web pour l'association sportive de Saint Ouen l'aumône.</p>
-          </div>
-        </div>
+            <div class="mb-3 p-3 bg-white">
+              <div class="row align-items-center">
+                <div class="col-5 col-sm-4 col-lg-3 col-xl-2 gx-2">
+                  <div class="d-flex align-items-center ">
+                    <i class="fab fa-bootstrap fa-2x me-3 text-primary"></i>
+                    <p class="fw-bold m-0">Bootstrap</p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="progress"data-bs-toggle="tooltip" title="50%"  >
+                    <div class="progress-bar w-50" role="progressbar" aria-valuenow="65" aria-valuemin="0"
+                         aria-valuemax="100">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-        <div class="box">
-          <div class="imbox">
-            <img
-              src="./images/new-iphone-iphonex.gif"
-              alt="gif telephone qui tourne"
-            />
-          </div>
-          <div class="text">
-            <h3>Application Mobile</h3>
-            <p>
-              Application mobile pour l'association sportive de Saint Ouen
-              l'aumône.
-            </p>
-          </div>
-        </div>
-        <div class="box">
-          <div class="imbox">
-            <img src="./images/secret.gif" alt="top secret" />
-          </div>
-          <div class="text">
-            <h3>Projet Secret</h3>
-            <p>Projet en cours d'élaboration.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+            <div class="mb-3 p-3 bg-white">
+              <div class="row align-items-center">
+                <div class="col-5 col-sm-4 col-lg-3 col-xl-2">
+                  <div class="d-flex align-items-center">
+                    <i class="fab fa-js fa-2x me-3 text-primary"></i>
+                    <p class="fw-bold m-0">Js </p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="progress" data-bs-toggle="tooltip" title="75%" >
+                    <div class="progress-bar w-75" role="progressbar" aria-valuenow="50" aria-valuemin="0"
+                         aria-valuemax="100">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-    <section class="contact" id="contact">
-      <div class="titre">
-        <h2 class="titre-texte">Contact</h2>
-      </div>
-      <div class="contactForm">
+            <div class="mb-3 p-3 bg-white">
+              <div class="row align-items-center">
+                <div class="col-5 col-sm-4 col-lg-3 col-xl-2 gx-2">
+                  <div class="d-flex align-items-center">
+                    <i class="fab fa-react fa-2x me-3 text-primary"></i>
+                    <p class="fw-bold m-0 ">React</p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="progress" data-bs-toggle="tooltip" title="50%" >
+                    <div class="progress-bar w-50" role="progressbar" aria-valuenow="50" aria-valuemin="0"
+                         aria-valuemax="100">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
 
-        <p>
-          Vous pouvez prendre contact avec moi par le biais des liens suivant:
-        </p>
-        <br />
-        <div class="inputboite">
-          <a href="https://www.linkedin.com/in/elimflorvil/" target="_blank"
-            >Linkedin</a
-          >
+            <div class="col-12 offset-md-1 col-md-4">
+              <img
+                src="./img/code.jpg"
+                alt="écran montrant du code php"
+                width="100%"
+              />
+            </div>
+          </div>
+
+          <div class="row gy-4 mt-5">
+            <div class="col-12 col-md-4">
+              <img
+                src="./img/typing-keyboard.gif"
+                alt="écran montrant des designs"
+                width="100%"
+              />
+            </div>
+            <div class="col-12 offset-md-1 col-md-7">
+            <div class="mb-3 p-3 bg-white">
+              <div class="row align-items-center">
+                <div class="col-5 col-sm-4 col-lg-3 col-xl-2">
+                  <div class="d-flex align-items-center">
+                    <i class="fab fa-node fa-2x me-3 text-primary"></i>
+                    <p class="fw-bold m-0">Node</p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="progress"data-bs-toggle="tooltip" title="50%"  >
+                    <div class="progress-bar w-50" role="progressbar" aria-valuenow="0" aria-valuemin="4"
+                         aria-valuemax="100">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mb-3 p-3 bg-white">
+              <div class="row align-items-center">
+                <div class="col-5 col-sm-4 col-lg-3 col-xl-2">
+                  <div class="d-flex align-items-center">
+                    <i class="fab fa-php fa-2x me-3 text-primary"></i>
+                    <p class="fw-bold m-0">PHP</p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="progress" data-bs-toggle="tooltip" title="50%" >
+                    <div class="progress-bar w-50" role="progressbar" aria-valuenow="65" aria-valuemin="0"
+                         aria-valuemax="100">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            <div class="mb-3 p-3 bg-white">
+              <div class="row align-items-center">
+                <div class="col-5 col-sm-4 col-lg-3 col-xl-2">
+                  <div class="d-flex align-items-center">
+                    <i class="fab fa-java fa-2x me-3 text-primary"></i>
+                    <p class="fw-bold m-0">JAVA</p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="progress" data-bs-toggle="tooltip" title="75%" >
+                    <div class="progress-bar w-75" role="progressbar" aria-valuenow="5" aria-valuemin="0"
+                         aria-valuemax="100">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mb-3 p-3 bg-white">
+              <div class="row align-items-center">
+                <div class="col-5 col-sm-4 col-lg-3 col-xl-2">
+                  <div class="d-flex align-items-center">
+                    <i class="fab fa-python fa-2x me-3 text-primary"></i>
+                    <p class="fw-bold m-0">Python</p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="progress" data-bs-toggle="tooltip" title="50%" >
+                    <div class="progress-bar w-50" role="progressbar" aria-valuenow="65" aria-valuemin="0"
+                         aria-valuemax="100">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+              <div class="mb-3 p-3 bg-white">
+              <div class="row align-items-center">
+                <div class="col-5 col-sm-4 col-lg-3 col-xl-2">
+                  <div class="d-flex align-items-center">
+                      <i class="bi bi-sliders fa-2x me-3 text-primary"></i>
+                    <p class="fw-bold m-0">Agile</p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="progress" data-bs-toggle="tooltip" title="100%" >
+                    <div class="progress-bar w-100" role="progressbar" aria-valuenow="65" aria-valuemin="0"
+                         aria-valuemax="100">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            </div>
+          </div>
         </div>
-        <div class="inputboite">
-          <a href="mailto:elim.florvil@icloud.com">Mail</a>
-        </div>
-        <div class="inputboite">
-          <a href="tel:+33782200836">Téléphone</a>
-        </div>
-      </div>
-    </section>
-    <div class="copyright">
-      <p>copyright 2021 <a href="#">Elim Florvil</a> Tous droits réservé</p>
-      <a href="#bannière" class="btn1">Haut de la page </a>
+      </section>
+<!-- -----------------------------------------------------
+
+                                Portfolio
+
+------------------------------------------------------------>
+      <section class="py-5">
+        <div id="portfolio" class="container">
+          <h2>Mon portfolio</h2>
+          <h3> Projet pro & personnel </h3>
+          <div class="row gy-4 mt-4">
+            <div class="col-3">
+              <div class="card align-items-center border-2 h-75">
+    <img src="./img/destruct.jpg" class="card-img-top h-50 " alt="...">
+    <div class="card-body">
+        <h5 class="card-title">Destruct Chess</h5>
+        <p class="card-text">Jeu en Java. Opposant deux joueurs, le gagnant étant la personne qui peut encore se déplacer après l'attaque de son opposant.</p>
+        <a href="#" class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#destruct">En savoir plus</a>
+
+        <div class="offcanvas offcanvas-bottom h-100" tabindex="-1" id="destruct" aria-labelledby="offcanvasBottomLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasBottomLabel">Destruct Chess</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
+    <div class="offcanvas-body small">
+        <div id="carouselDestruct" class="carousel slide h-75 " data-bs-ride="carousel">
+    <div class="carousel-inner bg-black">
+        <div class="carousel-item h-100 active " >
+            <img src="./img/design.jpg" class="d-block  align-items-center w-75" alt="...">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fuscesollicitudin.</p>
+        </div>
+        <div class="carousel-item" >
+            <img src="./img/formulaire.jpeg" class="d-block align-items-center w-75 " alt="...">
+            <p style="color: aliceblue;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fuscesollicitudin.</p>
+        </div>
+        <div class="carousel-item" >
+            <img src="./img/filters.jpeg" class="d-block align-items-center w-75" alt="...">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fuscesollicitudin.</p>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselDestruct" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+         <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselDestruct" data-bs-slide="next">
+         <span class="carousel-control-next-icon" aria-hidden="true"></span>
+         <span class="visually-hidden">Next</span>
+     </button>
+    </div>
+    </div>
+</div>
+</div>
+</div>
+ </div>
+
+
+            <div class="col-3">
+              <div class="card align-items-center border-2 h-75">
+    <img src="./img/shop.jpeg" class="card-img-top h-50" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">Coding Shop </h5>
+        <p class="card-text">Vitrine de e-commerce en HTML CSS et JavaScript pour l'achat de cours sur différents langages informatiques.</p>
+        <a href="#" class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#shop">En savoir plus</a>
+        <div class="offcanvas offcanvas-bottom h-100" tabindex="-1" id="shop" aria-labelledby="offcanvasBottomLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasBottomLabel">Coding Shop</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body small">
+         <div id="carouselShop" class="carousel slide h-75 " data-bs-ride="carousel">
+    <div class="carousel-inner ">
+        <div class="carousel-item h-100 active " >
+            <img src="./img/design.jpg" class="d-block  align-items-center w-75" alt="...">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fuscesollicitudin.</p>
+        </div>
+        <div class="carousel-item" >
+            <img src="./img/formulaire.jpeg" class="d-block align-items-center w-75 " alt="...">
+            <p style="color: aliceblue;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fuscesollicitudin.</p>
+        </div>
+        <div class="carousel-item" >
+            <img src="./img/filters.jpeg" class="d-block align-items-center w-75" alt="...">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fuscesollicitudin.</p>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselShop" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+         <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselShop" data-bs-slide="next">
+         <span class="carousel-control-next-icon" aria-hidden="true"></span>
+         <span class="visually-hidden">Next</span>
+     </button>
+    </div>
+    </div>
+</div>
+    </div>
+</div>
+ </div>
+
+
+            <div class="col-3">
+              <div class="card align-items-center border-2 h-75">
+    <img src="./img/filters.jpeg" class="card-img-top " alt="...">
+    <div class="card-body">
+        <h5 class="card-title">Filter Effect</h5>
+        <p class="card-text">Logiciels de filtres en ligne de commande en Java.</p>
+        <a href="#" class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#filter">En savoir plus</a>
+        <div class="offcanvas offcanvas-bottom h-100" tabindex="-1" id="filter" aria-labelledby="offcanvasBottomLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasBottomLabel">Filter Effect</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body small">
+         <div id="carouselFilter" class="carousel slide h-75 " data-bs-ride="carousel">
+    <div class="carousel-inner bg-black">
+        <div class="carousel-item h-100 active " >
+            <img src="./img/design.jpg" class="d-block  align-items-center w-75" alt="...">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fuscesollicitudin.</p>
+        </div>
+        <div class="carousel-item" >
+            <img src="./img/formulaire.jpeg" class="d-block align-items-center w-75 " alt="...">
+            <p style="color: aliceblue;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fuscesollicitudin.</p>
+        </div>
+        <div class="carousel-item" >
+            <img src="./img/filters.jpeg" class="d-block align-items-center w-75" alt="...">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fuscesollicitudin.</p>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselFilter" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+         <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselFilter" data-bs-slide="next">
+         <span class="carousel-control-next-icon" aria-hidden="true"></span>
+         <span class="visually-hidden">Next</span>
+     </button>
+    </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+
+
+     <div class="col-3">
+    <div class="card align-items-center border-2 h-75">
+    <img src="./img/fantasy.jpeg" class="card-img-top h-50" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">Fantasy</h5>
+        <p class="card-text">Jeu en Java. Opposant deux joueurs, le gagnant étant celui qui survie à l'assaut de son oppossant à la fin du combat.</p>
+        <a href="#" class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#fantasy">En savoir plus</a>
+        <div class="offcanvas offcanvas-bottom h-100" tabindex="-1" id="fantasy" aria-labelledby="offcanvasBottomLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasBottomLabel">Fantasy</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body small">
+         <div id="carouselFantasy" class="carousel slide h-75 " data-bs-ride="carousel">
+    <div class="carousel-inner bg-black">
+        <div class="carousel-item h-100 active " >
+            <img src="./img/design.jpg" class="d-block  align-items-center w-75" alt="...">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fuscesollicitudin.</p>
+        </div>
+        <div class="carousel-item" >
+            <img src="./img/formulaire.jpeg" class="d-block align-items-center w-75 " alt="...">
+            <p style="color: aliceblue;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fuscesollicitudin.</p>
+        </div>
+        <div class="carousel-item" >
+            <img src="./img/filters.jpeg" class="d-block align-items-center w-75" alt="...">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fuscesollicitudin.</p>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselFantasy" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+         <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselFantasy" data-bs-slide="next">
+         <span class="carousel-control-next-icon" aria-hidden="true"></span>
+         <span class="visually-hidden">Next</span>
+     </button>
+    </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="py-5 bg-light">
+        <div class="container">
+          <h2>Un projet à venir ?</h2>
+          <h3>Discutons en autour d'un café</h3>
+
+          <div class="row align-items-center gy-4 mt-5">
+            <div class="col-12 col-md-5">
+              <img
+                src="../img/grab-a-coffee.jpg"
+                alt="Image d'une tasse de café"
+                width="100%"
+              />
+            </div>
+            <div class="col-12 offset-md-1 col-md-6">
+              <form>
+        <div class="row gy-4">
+            <div class="col-6">
+                 <label for="prenom" class="form-label">Prénom</label>
+                 <input type="text" class="form-control" id="prenom" name="prenom" aria-describedby="nameHelp">
+            </div>
+            <div class="col-6">
+                 <label for="nom" class="form-label">Nom</label>
+                 <input type="text" class="form-control" id="nom" name="nom"  aria-describedby="nameHelp">
+            </div>
+        </div>
+        <div class="col-12">
+            <label for="mail" class="form-label">E-mail</label>
+            <input type="email" class="form-control" id="mail" name="mail">
+        </div>
+         <div class="col-12 mb-5">
+            <label for="message" class="form-label">Message</label>
+            <textarea name="message" id="message"  rows="3" class="form-control"></textarea>
+        </div>
+        
+ <div class="col-12">
+             <button type="submit" class="btn btn-primary w-100">Envoyer</button>
+        </div>
+       
+    
+   
+</form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <footer class="border-top">
+      <div class="container py-5">
+        <div class="row gy-4">
+          <div class="col-12 col-md-4">
+            <a class="navbar-brand text-uppercase fw-bold" href="/index.html">
+            <span class="bg-primary bg-gradient p-1 rounded-3 text-light">Elim</span> Florvil </a>
+          </div>
+          <div class="col-12 col-md-4 text-md-center" >
+<button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#mention">Mentions Légales</button>
+
+<div class="modal fade" id="mention" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Mentions Légales</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Lorem deserunt excepteur anim tempor proident sit officia. Laboris consequat pariatur mollit consectetur irure laboris esse velit anim est eiusmod eiusmod. Exercitation nulla tempor officia ullamco ex veniam occaecat esse ad laboris. Aute eiusmod consectetur nisi ipsum mollit. Ea anim id eiusmod duis voluptate culpa dolore consequat duis officia do laboris excepteur.</p>
+                <p>Deserunt ex sunt duis id pariatur et proident mollit culpa dolore. Quis quis consequat enim labore aliquip culpa. Non ut nisi nostrud voluptate sint exercitation consectetur irure. Veniam elit amet cillum anim exercitation minim velit.</p>
+            </div>
+        </div>
+    </div>
+</div>
+          </div>
+          <div class="col-12 col-md-4 text-md-end">
+            <ul class="list-inline">
+                <li class="list-inline-item">
+                  <a href=”https://www.linkedin.com/in/elimflorvil/” target=”_blank” class="text-decoration-none text-dark" data-bs-toggle="tooltip" title="LinkendIn" > <i class="bi bi-linkedin" ></i></a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="" target=”_blank” class="text-decoration-none text-dark" data-bs-toggle="tooltip" title="Github"> <i class="bi bi-github"></i></a>
+                  </li>
+                <li class="list-inline-item">
+                  <a href="mailto:elim.florvil@icloud.com" target=”_blank” class="text-decoration-none text-dark" data-bs-toggle="tooltip" title="Mail"><i class="bi bi-mailbox"></i></a>
+                </li>
+            </ul>
+        </div>
+      </div>
+     
+    </footer>
   </body>
 </html>
