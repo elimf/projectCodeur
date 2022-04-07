@@ -4,3 +4,71 @@ var tooltipTriggerList = [].slice.call(
 var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
     return new bootstrap.Tooltip(tooltipTriggerEl);
 });
+
+
+
+
+
+JSONtoDisplay();
+function JSONtoDisplay() {
+    const data = import("./data.json", {
+    assert: {
+        type: "json",
+    },
+});
+
+        var element = document.querySelector("#cartes");
+    element.querySelectorAll(".projetter");
+    data.then((d) =>
+        d.default.forEach((projet) => {
+            var projetOriginal = document.querySelector(".projetter");
+             var newprojet = projetOriginal.cloneNode(true);
+             newprojet.querySelector(".card-title").innerHTML = `${projet.titre}`;
+             newprojet.querySelector(".card-text").innerHTML = `${projet.intitule}`;
+             newprojet.querySelector(".offcanvas-title").innerHTML = `${projet.titre}`;
+             newprojet.querySelector(".imageTar").innerHTML = `<img src="${projet.image}" class=" card-img-top w-100 " alt="logo de la formation">`;
+             newprojet.querySelector(".btn-primary").removeAttribute("data-bs-target");
+             newprojet.querySelector(".btn-primary").setAttribute("data-bs-target",projet.lien);
+             newprojet.querySelector(".offcanvas-bottom").removeAttribute("id");
+             newprojet.querySelector(".offcanvas-bottom").setAttribute("id",projet.id);
+             newprojet.querySelector(".card-description").innerHTML = `${projet.description}`;
+              newprojet.querySelector(".card-video").innerHTML = `<video style="height: auto;width: 100%;" controls>
+                                             <source src="${projet.video}" type="video/mp4">
+                                          </video>`;
+             document.querySelector("#cartes").append(newprojet);
+        })
+    );
+
+    // adding carte to screen
+    // if (data != null) {
+    //     data.default.forEach((carte) => {
+    //         let newprojet = projetOriginal.cloneNode(true);
+
+    //         newprojet.querySelector(
+    //             ".carteNom"
+    //         ).innerHTML = `<p>${carte.nom}</p>`;
+    //         newprojet.querySelector(
+    //             ".cartePrix"
+    //         ).innerHTML = `<p>${carte.prix}€</p>`;
+    //         newprojet.querySelector(
+    //             ".carteStock"
+    //         ).innerHTML = `<p>${carte.stock}</p>`;
+    //         newprojet.querySelector(
+    //             ".carteLogo"
+    //         ).innerHTML = `<img src="${carte.imagePath}" alt="logo de la formation">`;
+
+    //         let etoiles = "";
+    //         for (var i = 0; i < 5; i++) {
+    //             if (i < carte.vote) etoiles += "★";
+    //             else etoiles += "☆";
+    //         }
+
+    //         newprojet.querySelector(
+    //             ".carteEvaluation"
+    //         ).innerHTML = `<p>${etoiles}</p>`;
+
+    //         document.querySelector("#Cartes").appendChild(newprojet);
+    //     });
+
+    // }
+}

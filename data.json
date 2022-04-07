@@ -1,0 +1,93 @@
+[
+    {
+        "titre": "Filter Effect",
+        "intitule": "Logiciels de filtres",
+        "image": "img/filters.jpg",
+        "lien": "#filter",
+        "id": "filter",
+        "description": "Voici un",
+        "video": "video/codingShop.mov"
+    },
+    {
+        "titre": "Weather App",
+        "intitule": "Logiciels de filtres",
+        "image": "img/meteo.png",
+        "lien": "#meteo",
+        "id": "meteo",
+        "description": "Voici un",
+        "video": "video/meteo.MP4",
+        "git":"https://github.com/elimf/Weather"
+    },
+    {
+        "titre": "Jungle Store",
+        "intitule": "Application Web",
+        "image": "img/jungle.jpg",
+        "lien": "#jungle",
+        "id": "jungle",
+        "description": "aha",
+        "video": "video/jungle.mov"
+    },
+    {
+        "titre": "FOOT XXl",
+        "intitule": "Développement d'un blog",
+        "image": "img/blog.jpg",
+        "lien": "#foot",
+        "id": "foot",
+        "description": "Voici un",
+        "video": "video/calcul.mov"
+    },
+    {
+        "titre": "Kitchen Factory",
+        "intitule": "Site de partage de Cuisine",
+        "image": "img/kitchen.jpg",
+        "lien": "#cuisine",
+        "id": "cuisine",
+        "description": "Voici un",
+        "video": "video/food.mov"
+    },
+    {
+        "titre": "MACARON",
+        "intitule": "Application Web",
+        "image": "img/compas.jpg",
+        "lien": "#macaron",
+        "id": "macaron",
+        "description": "Voici un",
+        "video": "video/calcul.mov"
+    },
+    {
+        "titre": "Calculatrice",
+        "intitule": "Application de calcul",
+        "image": "img/calculatrice.jpg",
+        "lien": "#calcul",
+        "id": "calcul",
+        "description": "Voici un",
+        "video":"video/calcul.mov"
+    },
+    {
+        "titre": "TRELLO BETA",
+        "intitule": "Application Trello ",
+        "image": "img/TRELLO.png",
+        "lien": "#trello",
+        "id": "trello",
+        "description": "Voici un",
+        "video": "video/calcul.mov"
+    },
+    {
+        "titre": "SNEAKERS ADDICT",
+        "intitule": "Site de vente de sneakers",
+        "image": "img/sacai.jpeg",
+        "lien": "#snaeakers",
+        "id": "sneakers",
+        "description": "Voici un",
+        "video": "video/"
+    },
+    {
+        "titre": "Start Fantasy",
+        "intitule": "Jeu de plateforme",
+        "image": "img/fantasy.jpeg",
+        "lien": "#fantasy",
+        "id": "fantasy",
+        "description": "Voici un",
+        "video": "video/calcul.mov"
+    }
+]
