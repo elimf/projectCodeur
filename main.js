@@ -23,6 +23,7 @@ function JSONtoDisplay() {
         d.default.forEach((projet) => {
             var projetOriginal = document.querySelector(".projetter");
              var newprojet = projetOriginal.cloneNode(true);
+             newprojet.style.display ='flex';
              newprojet.querySelector(".card-title").innerHTML = `${projet.titre}`;
              newprojet.querySelector(".card-text").innerHTML = `${projet.intitule}`;
              newprojet.querySelector(".offcanvas-title").innerHTML = `${projet.titre}`;
@@ -32,10 +33,22 @@ function JSONtoDisplay() {
              newprojet.querySelector(".offcanvas-bottom").removeAttribute("id");
              newprojet.querySelector(".offcanvas-bottom").setAttribute("id",projet.id);
              newprojet.querySelector(".card-description").innerHTML = `${projet.description}`;
-              newprojet.querySelector(".card-video").innerHTML = `<video style="height: auto;width: 100%;" controls>
+             if (projet.video == "vide") {
+                 console.log("c'est vraiment vide ");
+                  newprojet.querySelector(
+                      ".card-video"
+                  ).innerHTML = `<h3>Les documents relatifs a ce projet sont en cours d'élaboration.</h3><img src="${projet.img2}" >`;
+             }else{
+                   newprojet.querySelector(
+                       ".card-video"
+                   ).innerHTML = `<video style="height: 400px;" controls>
                                              <source src="${projet.video}" type="video/mp4">
                                           </video>`;
-             document.querySelector("#cartes").append(newprojet);
+             }
+              newprojet.querySelector(
+                  ".githublink"
+              ).innerHTML = ` <a  class="btn btn-danger" href="${projet.git}" target="_blank" rel="noopener noreferrer">Github</a>`;
+             document.querySelector("#cartes").append(newprojet);//
         })
     );
 

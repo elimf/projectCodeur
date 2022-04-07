@@ -1,12 +1,25 @@
 [
     {
+        "titre": "Coding Shop",
+        "intitule": "Vitrine de e-commerce",
+        "image": "img/shop.jpg",
+        "lien": "#coding",
+        "id": "coding",
+        "description": "Vitrine de e-commerce pour achat de cours en ligne de cours d'informatique réalisé lors d'un sprint autour du langage Javscript, afin d'avoir un premier aperçu de ce vaste langage.",
+        "video": "video/codingShop.mp4",
+        "img2": "img/next.png",
+        "git": "https://github.com/elimf/CodingShop"
+    },
+    {
         "titre": "Filter Effect",
         "intitule": "Logiciels de filtres",
         "image": "img/filters.jpg",
         "lien": "#filter",
         "id": "filter",
         "description": "Voici un",
-        "video": "video/codingShop.mov"
+        "video": "vide",
+        "img2": "img/next.png",
+        "git": "https://github.com/coding-factory-classrooms/python-l1-imagefilter-python-l1-elim-julien-mathias-antony"
     },
     {
         "titre": "Weather App",
@@ -16,7 +29,8 @@
         "id": "meteo",
         "description": "Voici un",
         "video": "video/meteo.MP4",
-        "git":"https://github.com/elimf/Weather"
+        "img2": "img/next.png",
+        "git": "https://github.com/elimf/Weather"
     },
     {
         "titre": "Jungle Store",
@@ -24,8 +38,10 @@
         "image": "img/jungle.jpg",
         "lien": "#jungle",
         "id": "jungle",
-        "description": "aha",
-        "video": "video/jungle.mov"
+        "description": "Je voulais découvrir un framework de Javascript j'ai donc suivi une formation OpenClassRoom pour voir les bases de React Js.",
+        "video": "video/jungle.mp4",
+        "img2": "img/next.png",
+        "git": "https://github.com/elimf/Project-React"
     },
     {
         "titre": "FOOT XXl",
@@ -33,8 +49,10 @@
         "image": "img/blog.jpg",
         "lien": "#foot",
         "id": "foot",
-        "description": "Voici un",
-        "video": "video/calcul.mov"
+        "description": "Foot XXl a été réalisé en suivant une formation OpenClassRoom suite à une envie de découvrir le langage PHP.",
+        "video": "vide",
+        "img2": "img/next.png",
+        "git": "https://github.com/elimf/FootXXl"
     },
     {
         "titre": "Kitchen Factory",
@@ -42,8 +60,10 @@
         "image": "img/kitchen.jpg",
         "lien": "#cuisine",
         "id": "cuisine",
-        "description": "Voici un",
-        "video": "video/food.mov"
+        "description": "Kitchen Factory a été réalisé en suivant une formation OpenClassRoom je voulais appronfondir le langage PHP.",
+        "video": "video/food.mp4",
+        "img2": "img/next.png",
+        "git": "https://github.com/elimf/Kitchen"
     },
     {
         "titre": "MACARON",
@@ -51,8 +71,10 @@
         "image": "img/compas.jpg",
         "lien": "#macaron",
         "id": "macaron",
-        "description": "Voici un",
-        "video": "video/calcul.mov"
+        "description": "Lors d'une candidature dans la quête de mon alternance, je devais réaliser ce projet en quelques jours avec le peu de connaissance au départ. Ayant bien améner le projet j'ai décidé de le partager avec vous.",
+        "video": "vide",
+        "img2": "img/next.png",
+        "git": "https://github.com/elimf/MacaronTest"
     },
     {
         "titre": "Calculatrice",
@@ -60,8 +82,10 @@
         "image": "img/calculatrice.jpg",
         "lien": "#calcul",
         "id": "calcul",
-        "description": "Voici un",
-        "video":"video/calcul.mov"
+        "description": "Ce projet a été fait suite à une formation Javascript que j'ai suivi pour me familiarisé avec ce langage.",
+        "video": "video/calcul.mp4",
+        "img2": "img/next.png",
+        "git": "https://github.com/elimf/Calculatrice"
     },
     {
         "titre": "TRELLO BETA",
@@ -69,8 +93,10 @@
         "image": "img/TRELLO.png",
         "lien": "#trello",
         "id": "trello",
-        "description": "Voici un",
-        "video": "video/calcul.mov"
+        "description": "Le Projet Trello Bêta m'a permis de monter en compétences sur le framework Codeigniter 4 que j'utilise avec Coop-Ere. ",
+        "video": "vide",
+        "img2": "img/next.png",
+        "git": "https://github.com/elimf/Trello"
     },
     {
         "titre": "SNEAKERS ADDICT",
@@ -78,8 +104,21 @@
         "image": "img/sacai.jpeg",
         "lien": "#snaeakers",
         "id": "sneakers",
-        "description": "Voici un",
-        "video": "video/"
+        "description": "Le projet Sneakers Addict a été conçu pendant un sprint de Javascript Avancée en Vue Js.",
+        "video": "vide",
+        "img2": "img/next.png",
+        "git": "https://github.com/elimf/SneakersAddict"
+    },
+    {
+        "titre": "Instagram",
+        "intitule": "Application ",
+        "image": "img/insta.jpeg",
+        "lien": "#insta",
+        "id": "insta",
+        "description": "Le projet Instagram était un projet que j'ai du effectuer lors d'un sprint autour du langage PHP en binôme avec un camarade.<br>Etant,très impliqué dans le projet j'ai décidé d'aller plus loin après la restitution du projet en ajoutant des fonctionnalités pour se rapprocher au maximun d'instagram.",
+        "video": "vide",
+        "img2": "img/next.png",
+        "git": "https://github.com/elimf/Insta"
     },
     {
         "titre": "Start Fantasy",
@@ -87,7 +126,9 @@
         "image": "img/fantasy.jpeg",
         "lien": "#fantasy",
         "id": "fantasy",
-        "description": "Voici un",
-        "video": "video/calcul.mov"
+        "description": "Le projet Start Fantasy a vu le jour lors d'un sprint autour de la Progamation Orientée Objet en Java.",
+        "video": "vide",
+        "img2": "img/next.png",
+        "git": "https://github.com/elimf/StartFantasy"
     }
 ]
