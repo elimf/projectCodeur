@@ -51,36 +51,4 @@ function JSONtoDisplay() {
         })
     );
 
-    // adding carte to screen
-    // if (data != null) {
-    //     data.default.forEach((carte) => {
-    //         let newprojet = projetOriginal.cloneNode(true);
-
-    //         newprojet.querySelector(
-    //             ".carteNom"
-    //         ).innerHTML = `<p>${carte.nom}</p>`;
-    //         newprojet.querySelector(
-    //             ".cartePrix"
-    //         ).innerHTML = `<p>${carte.prix}€</p>`;
-    //         newprojet.querySelector(
-    //             ".carteStock"
-    //         ).innerHTML = `<p>${carte.stock}</p>`;
-    //         newprojet.querySelector(
-    //             ".carteLogo"
-    //         ).innerHTML = `<img src="${carte.imagePath}" alt="logo de la formation">`;
-
-    //         let etoiles = "";
-    //         for (var i = 0; i < 5; i++) {
-    //             if (i < carte.vote) etoiles += "★";
-    //             else etoiles += "☆";
-    //         }
-
-    //         newprojet.querySelector(
-    //             ".carteEvaluation"
-    //         ).innerHTML = `<p>${etoiles}</p>`;
-
-    //         document.querySelector("#Cartes").appendChild(newprojet);
-    //     });
-
-    // }
 }
