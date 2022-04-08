@@ -34,7 +34,6 @@ function JSONtoDisplay() {
              newprojet.querySelector(".offcanvas-bottom").setAttribute("id",projet.id);
              newprojet.querySelector(".card-description").innerHTML = `${projet.description}`;
              if (projet.video == "vide") {
-                 console.log("c'est vraiment vide ");
                   newprojet.querySelector(
                       ".card-video"
                   ).innerHTML = `<h3>Les documents relatifs a ce projet sont en cours d'élaboration.</h3><img src="${projet.img2}" >`;
