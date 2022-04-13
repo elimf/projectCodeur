@@ -11,17 +11,6 @@
         "git": "https://github.com/elimf/CodingShop"
     },
     {
-        "titre": "Filter Effect",
-        "intitule": "Logiciels de filtres",
-        "image": "img/filters.jpg",
-        "lien": "#filter",
-        "id": "filter",
-        "description": "Voici un",
-        "video": "vide",
-        "img2": "img/next.png",
-        "git": "https://github.com/coding-factory-classrooms/python-l1-imagefilter-python-l1-elim-julien-mathias-antony"
-    },
-    {
         "titre": "Weather App",
         "intitule": "Logiciels de filtres",
         "image": "img/meteo.png",
@@ -119,16 +108,7 @@
         "video": "vide",
         "img2": "img/next.png",
         "git": "https://github.com/elimf/Insta"
-    },
-    {
-        "titre": "Start Fantasy",
-        "intitule": "Jeu de plateforme",
-        "image": "img/fantasy.jpeg",
-        "lien": "#fantasy",
-        "id": "fantasy",
-        "description": "Le projet Start Fantasy a vu le jour lors d'un sprint autour de la Progamation Orientée Objet en Java.",
-        "video": "vide",
-        "img2": "img/next.png",
-        "git": "https://github.com/elimf/StartFantasy"
     }
+    
 ]
+
