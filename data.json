@@ -11,6 +11,17 @@
         "git": "https://github.com/elimf/CodingShop"
     },
     {
+        "titre": "Filter Effect",
+        "intitule": "Logiciels de filtres",
+        "image": "img/filters.jpg",
+        "lien": "#filter",
+        "id": "filter",
+        "description": "Voici un",
+        "video": "vide",
+        "img2": "img/next.png",
+        "git": "https://github.com/coding-factory-classrooms/python-l1-imagefilter-python-l1-elim-julien-mathias-antony"
+    },
+    {
         "titre": "Weather App",
         "intitule": "Logiciels de filtres",
         "image": "img/meteo.png",
@@ -91,7 +102,7 @@
         "titre": "SNEAKERS ADDICT",
         "intitule": "Site de vente de sneakers",
         "image": "img/sacai.jpeg",
-        "lien": "#snaeakers",
+        "lien": "#sneakers",
         "id": "sneakers",
         "description": "Le projet Sneakers Addict a été conçu pendant un sprint de Javascript Avancée en Vue Js.",
         "video": "vide",
@@ -109,6 +120,4 @@
         "img2": "img/next.png",
         "git": "https://github.com/elimf/Insta"
     }
-    
 ]
-
