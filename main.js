@@ -31,14 +31,17 @@ document.querySelector("#navbar").innerHTML = ` <div class="container">
       </div>`;
 
 //PRESENTATION
- document.querySelector("#presentation").innerHTML = `<div class="container">
+document.querySelector("#presentation").innerHTML = `<div class="container">
             <div class="row align-items-center gy-4">
                <div class="col-12 col-md-6">
                   <h1 class="fw-bold">
                      Je suis Elim Florvil Développeur Web
                   </h1>
                   <h2 class="fw-light">Bienvenue dans mon univers créatif</h2>
-                  <button class="btn btn-primary mt-5">Compétences</button>
+                  <button class="btn" ><a class="btn btn-primary " href="#compet">Compétences</a></button>
+                  <!-- Button trigger modal -->
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#cv">Voici mon CV </button>
+
                </div>
                <div class="col-12 col-md-6">
                   <img src="./img/home.jpeg" alt="Home" width="100%" />
@@ -49,17 +52,35 @@ document.querySelector("#navbar").innerHTML = ` <div class="container">
                   
                </div>
             </div>
-         </div>`; 
-         
+         </div>`;
+
 //SPEACH DU DÉBUT
-document.querySelector("#speach").innerHTML = `<p> lourd Deserunt esse proident irure ipsum non labore dolore tempor eu. 
-                     Fugiat magna voluptate deserunt incididunt enim sint amet eiusmod ipsum enim culpa elit laborum voluptate. 
-                     Esse laborum tempor mollit duis exercitation in veniam nisi. Ullamco irure ut velit sit velit nisi. Minim veniam quis cillum nisi ea ea ex fugiat tempor veniam sint minim dolor. 
-                     Sit commodo nostrud dolor id est aliquip deserunt.
-                     Elit veniam cupidatat eiusmod dolore ullamco ad in. 
-                     Laborum esse magna veniam ea ipsum deserunt deserunt. 
-                     Dolore mollit duis ut do est quis ullamco excepteur. Deserunt consequat minim amet commodo proident sunt esse id reprehenderit elit do ad. Officia aliquip ad culpa ullamco adipisicing fugiat.
-                  </p>`;
+document.querySelector("#speach").innerHTML = ` 
+        <div
+            class="modal fade"
+            id="cv"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                           Mon Cv
+                        </h5>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body"><iframe src="img/CvDeveloppeurFlorvilElim .pdf" width="100%" height="800px"> </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>`;
 //Footer
 document.querySelector("#footer").innerHTML = ` <div class="container py-5 ">
             <div class="row gy-4">
@@ -83,7 +104,6 @@ document.querySelector("#footer").innerHTML = ` <div class="container py-5 ">
                </div>
             </div>
          </div>`;
-
 
 //MENTION LEGALE
 document.querySelector(
@@ -141,43 +161,58 @@ document.querySelector(
 JSONtoDisplay();
 function JSONtoDisplay() {
     const data = import("./data.json", {
-    assert: {
-        type: "json",
-    },
-});
+        assert: {
+            type: "json",
+        },
+    });
 
-        var element = document.querySelector("#cartes");
+    var element = document.querySelector("#cartes");
     element.querySelectorAll(".projetter");
     data.then((d) =>
         d.default.forEach((projet) => {
             var projetOriginal = document.querySelector(".projetter");
-             var newprojet = projetOriginal.cloneNode(true);
-             newprojet.style.display ='flex';
-             newprojet.querySelector(".card-title").innerHTML = `${projet.titre}`;
-             newprojet.querySelector(".card-text").innerHTML = `${projet.intitule}`;
-             newprojet.querySelector(".offcanvas-title").innerHTML = `${projet.titre}`;
-             newprojet.querySelector(".imageTar").innerHTML = `<img src="${projet.image}" class=" card-img-top w-100 " alt="logo de la formation">`;
-             newprojet.querySelector(".btn-primary").removeAttribute("data-bs-target");
-             newprojet.querySelector(".btn-primary").setAttribute("data-bs-target",projet.lien);
-             newprojet.querySelector(".offcanvas-bottom").removeAttribute("id");
-             newprojet.querySelector(".offcanvas-bottom").setAttribute("id",projet.id);
-             newprojet.querySelector(".card-description").innerHTML = `${projet.description}`;
-             if (projet.video == "vide") {
-                  newprojet.querySelector(
-                      ".card-video"
-                  ).innerHTML = `<h3>Les documents relatifs a ce projet sont en cours d'élaboration.</h3><img src="${projet.img2}" >`;
-             }else{
-                   newprojet.querySelector(
-                       ".card-video"
-                   ).innerHTML = `<video style="height: 400px;" controls>
+            var newprojet = projetOriginal.cloneNode(true);
+            newprojet.style.display = "flex";
+            newprojet.querySelector(
+                ".card-title"
+            ).innerHTML = `${projet.titre}`;
+            newprojet.querySelector(
+                ".card-text"
+            ).innerHTML = `${projet.intitule}`;
+            newprojet.querySelector(
+                ".offcanvas-title"
+            ).innerHTML = `${projet.titre}`;
+            newprojet.querySelector(
+                ".imageTar"
+            ).innerHTML = `<img src="${projet.image}" class=" card-img-top w-100 " alt="logo de la formation">`;
+            newprojet
+                .querySelector(".btn-primary")
+                .removeAttribute("data-bs-target");
+            newprojet
+                .querySelector(".btn-primary")
+                .setAttribute("data-bs-target", projet.lien);
+            newprojet.querySelector(".offcanvas-bottom").removeAttribute("id");
+            newprojet
+                .querySelector(".offcanvas-bottom")
+                .setAttribute("id", projet.id);
+            newprojet.querySelector(
+                ".card-description"
+            ).innerHTML = `${projet.description}`;
+            if (projet.video == "vide") {
+                newprojet.querySelector(
+                    ".card-video"
+                ).innerHTML = `<h3>Les documents relatifs a ce projet sont en cours d'élaboration.</h3><img src="${projet.img2}" >`;
+            } else {
+                newprojet.querySelector(
+                    ".card-video"
+                ).innerHTML = `<video style="height: 400px;" controls>
                                              <source src="${projet.video}" type="video/mp4">
                                           </video>`;
-             }
-              newprojet.querySelector(
-                  ".githublink"
-              ).innerHTML = ` <a  class="btn btn-danger" href="${projet.git}" target="_blank" rel="noopener noreferrer">Github</a>`;
-             document.querySelector("#cartes").append(newprojet);//
+            }
+            newprojet.querySelector(
+                ".githublink"
+            ).innerHTML = ` <a  class="btn btn-danger" href="${projet.git}" target="_blank" rel="noopener noreferrer">Github</a>`;
+            document.querySelector("#cartes").append(newprojet); //
         })
     );
-
 }
