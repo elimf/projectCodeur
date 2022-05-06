@@ -11,17 +11,6 @@
         "git": "https://github.com/elimf/CodingShop"
     },
     {
-        "titre": "Filter Effect",
-        "intitule": "Logiciels de filtres",
-        "image": "img/filters.jpg",
-        "lien": "#filter",
-        "id": "filter",
-        "description": "Voici un",
-        "video": "vide",
-        "img2": "img/next.png",
-        "git": "https://github.com/coding-factory-classrooms/python-l1-imagefilter-python-l1-elim-julien-mathias-antony"
-    },
-    {
         "titre": "Weather App",
         "intitule": "Logiciels de filtres",
         "image": "img/meteo.png",
@@ -64,17 +53,6 @@
         "video": "video/food.mp4",
         "img2": "img/next.png",
         "git": "https://github.com/elimf/Kitchen"
-    },
-    {
-        "titre": "MACARON",
-        "intitule": "Application Web",
-        "image": "img/compas.jpg",
-        "lien": "#macaron",
-        "id": "macaron",
-        "description": "Lors d'une candidature dans la quête de mon alternance, je devais réaliser ce projet en quelques jours avec le peu de connaissance au départ. Ayant bien améner le projet j'ai décidé de le partager avec vous.",
-        "video": "vide",
-        "img2": "img/next.png",
-        "git": "https://github.com/elimf/MacaronTest"
     },
     {
         "titre": "Calculatrice",
