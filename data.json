@@ -66,17 +66,6 @@
         "git": "https://github.com/elimf/Calculatrice"
     },
     {
-        "titre": "TRELLO BETA",
-        "intitule": "Application Trello ",
-        "image": "img/TRELLO.png",
-        "lien": "#trello",
-        "id": "trello",
-        "description": "Le Projet Trello Bêta m'a permis de monter en compétences sur le framework Codeigniter 4 que j'utilise avec Coop-Ere. ",
-        "video": "vide",
-        "img2": "img/next.png",
-        "git": "https://github.com/elimf/Trello"
-    },
-    {
         "titre": "SNEAKERS ADDICT",
         "intitule": "Site de vente de sneakers",
         "image": "img/sacai.jpeg",
@@ -97,5 +86,16 @@
         "video": "vide",
         "img2": "img/next.png",
         "git": "https://github.com/elimf/Insta"
+    },
+    {
+        "titre": "MetaTube",
+        "intitule": "Application ",
+        "image": "img/meta.svg",
+        "lien": "#metatube",
+        "id": "metatube",
+        "description": "Le projet Metatube est un projet de fin d'année ou l'on devait s'organiser de façon scrum avec l'ensemble de la promotion j'ai effectuer avec mn groupe la partie connexion et j'ai pu assister certains groupes sur certaines tâches.",
+        "video": "vide",
+        "img2": "img/next.png",
+        "git": "https://github.com/Celiian/MetaTube"
     }
 ]
