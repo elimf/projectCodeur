@@ -33,28 +33,6 @@
         "git": "https://github.com/elimf/Project-React"
     },
     {
-        "titre": "FOOT XXl",
-        "intitule": "Développement d'un blog",
-        "image": "img/blog.jpg",
-        "lien": "#foot",
-        "id": "foot",
-        "description": "Foot XXl a été réalisé en suivant une formation OpenClassRoom suite à une envie de découvrir le langage PHP.",
-        "video": "vide",
-        "img2": "img/next.png",
-        "git": "https://github.com/elimf/FootXXl"
-    },
-    {
-        "titre": "Kitchen Factory",
-        "intitule": "Site de partage de Cuisine",
-        "image": "img/kitchen.jpg",
-        "lien": "#cuisine",
-        "id": "cuisine",
-        "description": "Kitchen Factory a été réalisé en suivant une formation OpenClassRoom je voulais appronfondir le langage PHP.",
-        "video": "video/food.mp4",
-        "img2": "img/next.png",
-        "git": "https://github.com/elimf/Kitchen"
-    },
-    {
         "titre": "Calculatrice",
         "intitule": "Application de calcul",
         "image": "img/calculatrice.jpg",
@@ -86,16 +64,6 @@
         "video": "vide",
         "img2": "img/next.png",
         "git": "https://github.com/elimf/Insta"
-    },
-    {
-        "titre": "MetaTube",
-        "intitule": "Application ",
-        "image": "img/youtube.jpeg",
-        "lien": "#metatube",
-        "id": "metatube",
-        "description": "Le projet Metatube est un projet de fin d'année ou l'on devait s'organiser de façon scrum avec l'ensemble de la promotion j'ai effectuer avec mn groupe la partie connexion et j'ai pu assister certains groupes sur certaines tâches.",
-        "video": "vide",
-        "img2": "img/next.png",
-        "git": "https://github.com/Celiian/MetaTube"
     }
+    
 ]

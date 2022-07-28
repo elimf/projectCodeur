@@ -165,3 +165,15 @@ function JSONtoDisplay() {
         })
     );
 }
+
+// {
+//     "titre": "MetaTube",
+//     "intitule": "Application ",
+//     "image": "img/youtube.jpeg",
+//     "lien": "#metatube",
+//     "id": "metatube",
+//     "description": "Le projet Metatube est un projet de fin d'année ou l'on devait s'organiser de façon scrum avec l'ensemble de la promotion j'ai effectuer avec mn groupe la partie connexion et j'ai pu assister certains groupes sur certaines tâches.",
+//     "video": "vide",
+//     "img2": "img/next.png",
+//     "git": "https://github.com/Celiian/MetaTube"
+// }
