@@ -1,3 +1,4 @@
+
 var tooltipTriggerList = [].slice.call(
     document.querySelectorAll('[data-bs-toggle="tooltip"]')
 );
@@ -6,11 +7,11 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
 });
 //navbar
 document.querySelector("#navbar").innerHTML = ` <div class="container">
-         <a class="navbar-brand text-uppercase fw-bold" href="/index.html">
-         <span class="bg-primary bg-gradient p-1 rounded-3 text-light">Elim</span> Florvil
-         </a>
+
+        <img src="assets/img/zebi.svg" alt="" style="width:3rem">
+
          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-         <span class="navbar-toggler-icon"></span>
+         <span class="navbar-toggler-icon"><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><line x1="21" y1="10" x2="3" y2="10"></line><line x1="21" y1="6" x2="3" y2="6"></line><line x1="21" y1="14" x2="3" y2="14"></line><line x1="21" y1="18" x2="3" y2="18"></line></svg></span>
          </button>
          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
@@ -26,6 +27,15 @@ document.querySelector("#navbar").innerHTML = ` <div class="container">
                <li class="nav-item">
                   <a class="nav-link" href="#contact">Contact</a>
                </li>
+               <li class="nav-item last">
+                     <div class="darkmode-toggle-wrapper">
+         <input type="checkbox" id="darkmode-toggle" aria-label="dark mode toggle" class="darkmode-toggle-checkbox">
+         <div class="darkmode-toggle-circle">
+         </div>
+         <span class="darkmode-toggle-emoji">🌚</span>
+         <span class="darkmode-toggle-emoji">🌞</span>
+      </div>
+               </li>
             </ul>
          </div>
       </div>`;
@@ -34,8 +44,7 @@ document.querySelector("#navbar").innerHTML = ` <div class="container">
 document.querySelector("#footer").innerHTML = ` <div class="container py-5 ">
             <div class="row gy-4">
                <div class="col-4 col-md-4">
-                  <a class="navbar-brand text-uppercase fw-bold" href="/index.html">
-                  <span class="bg-primary bg-gradient p-1 rounded-3 text-light">Elim</span> Florvil </a>
+                  <img src="assets/img/zebi.svg" alt="" style="width:3rem">
                </div>
                <div id="mentionlegal"class="col-4 col-md-4 text-md-center" >
                   
@@ -43,10 +52,10 @@ document.querySelector("#footer").innerHTML = ` <div class="container py-5 ">
                   <div class="col-4 col-md-4 text-md-end ">
                      <ul class="list-inline">
                         <li class="list-inline-item ">
-                           <a href="https://www.linkedin.com/in/elimflorvil" target="_blank" class="text-decoration-none text-dark" data-bs-toggle="tooltip" title="LinkendIn" > <i class="bi bi-linkedin " ></i></a>
+                           <a href="https://www.linkedin.com/in/elimflorvil" target="_blank" class="text-decoration-none " data-bs-toggle="tooltip" title="LinkendIn" > <i class="bi bi-linkedin " ></i></a>
                         </li>
                         <li class="list-inline-item">
-                           <a href="https://github.com/elimf" target=”_blank” class="text-decoration-none text-dark" data-bs-toggle="tooltip" title="Github"> <i class="bi bi-github"></i></a>
+                           <a href="https://github.com/elimf" target=”_blank” class="text-decoration-none " data-bs-toggle="tooltip" title="Github"> <i class="bi bi-github"></i></a>
                         </li>
                      </ul>
                   </div>
@@ -57,7 +66,7 @@ document.querySelector("#footer").innerHTML = ` <div class="container py-5 ">
 //MENTION LEGALE
 document.querySelector(
     "#mentionlegal"
-).innerHTML = ` <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#mention">Mentions Légales</button>
+).innerHTML = ` <button type="button" class="btn text-info " data-bs-toggle="modal" data-bs-target="#mention">Mentions Légales</button>
                   <div class="modal fade" id="mention" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                      <div class="modal-dialog">
                         <div class="modal-content">
@@ -107,6 +116,45 @@ document.querySelector(
                      </div>
                   </div>`;
 
+$(document).ready(function() {
+
+  $('.flipper').on('click', function () {
+    $(this).find('.flipper-card').toggleClass('flipper-is-flipped');
+  });
+
+});
+const darkmodeToggle = document.querySelector("#darkmode-toggle");
+const navbar = document.querySelector("nav");
+const modal = document.querySelector(".modal-content");
+
+
+/* css customprops detect the default automatically, but this makes sure the starting switch position also corresponds */
+if (
+  window.matchMedia &&
+  window.matchMedia("(prefers-color-scheme: dark)").matches
+) {
+  darkmodeToggle.checked = true;
+}
+
+/* These classes are for when a user decides to not go with their default setting */
+darkmodeToggle.addEventListener("change", () => {
+  if (darkmodeToggle.checked) {
+
+    document.body.classList.add("darkmode");
+    document.body.classList.remove("lightmode");
+    navbar.classList.add("darkmode");
+   navbar.classList.remove("lightmode");
+   modal.classList.add("darkmode");
+    modal.classList.remove("lightmode");
+  } else {
+    document.body.classList.remove("darkmode");
+    document.body.classList.add("lightmode");
+   navbar.classList.add("lightmode");
+   navbar.classList.remove("darkmode");
+   modal.classList.add("lightmode");
+    modal.classList.remove("darkmode");
+  }
+});
 JSONtoDisplay();
 function JSONtoDisplay() {
     const data = import("./data.json", {
@@ -121,59 +169,50 @@ function JSONtoDisplay() {
         d.default.forEach((projet) => {
             var projetOriginal = document.querySelector(".projetter");
             var newprojet = projetOriginal.cloneNode(true);
-            newprojet.style.display = "flex";
+            newprojet.classList.remove("d-none");
             newprojet.querySelector(
                 ".card-title"
             ).innerHTML = `${projet.titre}`;
-            newprojet.querySelector(
-                ".card-text"
-            ).innerHTML = `${projet.intitule}`;
-            newprojet.querySelector(
-                ".offcanvas-title"
-            ).innerHTML = `${projet.titre}`;
-            newprojet.querySelector(
-                ".imageTar"
-            ).innerHTML = `<img src="${projet.image}" class=" card-img-top w-100 " alt="logo de la formation">`;
-            newprojet
-                .querySelector(".btn-primary")
-                .removeAttribute("data-bs-target");
-            newprojet
-                .querySelector(".btn-primary")
-                .setAttribute("data-bs-target", projet.lien);
-            newprojet.querySelector(".offcanvas-bottom").removeAttribute("id");
-            newprojet
-                .querySelector(".offcanvas-bottom")
-                .setAttribute("id", projet.id);
-            newprojet.querySelector(
-                ".card-description"
-            ).innerHTML = `${projet.description}`;
+            newprojet.querySelector(".flipper-front").style.backgroundImage = `url('assets/${projet.image}')`;
+            newprojet.querySelector(".flipper").addEventListener("click", function() {
+ $(this).find('.flipper-card').toggleClass('flipper-is-flipped');
+});
+            // newprojet.querySelector(
+            //     ".card-text"
+            // ).innerHTML = `${projet.intitule}`;
+            // newprojet.querySelector(
+            //     ".imageTar"
+            // ).innerHTML = `<img src="${projet.image}" class=" card-img-top w-100 " alt="logo de la formation">`;
+            // newprojet
+            //     .querySelector(".btn-primary")
+            //     .removeAttribute("data-bs-target");
+            // newprojet
+            //     .querySelector(".btn-primary")
+            //     .setAttribute("data-bs-target", projet.lien);
+            // newprojet.querySelector(".offcanvas-bottom").removeAttribute("id");
+            // newprojet
+            //     .querySelector(".offcanvas-bottom")
+            //     .setAttribute("id", projet.id);
+            // newprojet.querySelector(
+            //     ".card-description"
+            // ).innerHTML = `${projet.description}`;
             if (projet.video == "vide") {
                 newprojet.querySelector(
-                    ".card-video"
-                ).innerHTML = `<h3>Les documents relatifs a ce projet sont en cours d'élaboration.</h3><img src="${projet.img2}" >`;
+                    ".flipper-video"
+                ).innerHTML = `<img style="width: 100%;"src="assets/${projet.img2}" >`;
             } else {
                 newprojet.querySelector(
-                    ".card-video"
-                ).innerHTML = `<video style="height: 400px;" controls>
-                                             <source src="${projet.video}" type="video/mp4">
+                    ".flipper-video"
+                ).innerHTML = `<video loop autoplay style="width: 80%" controls>
+                                             <source src="assets/${projet.video}" type="video/mp4">
                                           </video>`;
-            }
+             }
             newprojet.querySelector(
                 ".githublink"
-            ).innerHTML = ` <a  class="btn btn-danger" href="${projet.git}" target="_blank" rel="noopener noreferrer">Github</a>`;
-            document.querySelector("#cartes").append(newprojet); //
+            ).innerHTML = ` <a class="button-three" href="${projet.git}" target="_blank" rel="noopener noreferrer">Lien Github</a>`;
+            document.querySelector("#cartes").append(newprojet); 
         })
     );
 }
 
-// {
-//     "titre": "MetaTube",
-//     "intitule": "Application ",
-//     "image": "img/youtube.jpeg",
-//     "lien": "#metatube",
-//     "id": "metatube",
-//     "description": "Le projet Metatube est un projet de fin d'année ou l'on devait s'organiser de façon scrum avec l'ensemble de la promotion j'ai effectuer avec mn groupe la partie connexion et j'ai pu assister certains groupes sur certaines tâches.",
-//     "video": "vide",
-//     "img2": "img/next.png",
-//     "git": "https://github.com/Celiian/MetaTube"
-// }
+
