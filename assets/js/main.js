@@ -401,8 +401,8 @@ var demoJson = {
           en: "Development of a cross-platform application",
         },
         task3: {
-          fr: "Création d'un espace admin dans l'application mobile",
-          en: "Creation of an admin space in the mobile application",
+          fr: "Création d'un espace admin ",
+          en: "Creation of an admin space",
         },
         
       },
