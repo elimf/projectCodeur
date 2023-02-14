@@ -393,21 +393,18 @@ var demoJson = {
           en: "Part-time fullstack developer",
         },
         task1: {
-          fr: "Création et mise en place d'une API en Symfony pour une application mobile développé en Flutter",
-          en: "Creation and implementation of an API in symfony for a mobile application developed in Flutter",
+          fr: "Création d'une API en Symfony pour une application mobile développé en Flutter",
+          en: "Creation of an API in Symfony for a mobile application developed in Flutter",
         },
         task2: {
-          fr: "Développement d'un site web responsive ",
-          en: "Development of a responsive website",
+          fr: "Développement d'une application cross-plateforme ",
+          en: "Development of a cross-platform application",
         },
         task3: {
-          fr: "Documentation API",
-          en: "Documentation for the API",
-        },
-        task4: {
           fr: "Création d'un espace admin dans l'application mobile",
           en: "Creation of an admin space in the mobile application",
         },
+        
       },
     },
     projet: {
