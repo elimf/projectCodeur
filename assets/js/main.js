@@ -617,7 +617,7 @@ function sendMail() {
 
   // Envoyer l'e-mail via EmailJS
   emailjs
-    .send("service_c7zq8tq", "service_c7zq8tq", {
+    .send("service_c7zq8tq", "template_h2h9jpl", {
       from_name: name,
       from_email: email,
       message: message,
@@ -630,4 +630,7 @@ function sendMail() {
         console.log("FAILED...", error);
       }
     );
+}
+function onEmailJsLoad() {
+  console.log("EmailJS loaded.");
 }
