@@ -404,7 +404,6 @@ var demoJson = {
           fr: "Création d'un espace admin ",
           en: "Creation of an admin space",
         },
-        
       },
     },
     projet: {
@@ -609,3 +608,26 @@ document.querySelector(
                         </div>
                      </div>
                   </div>`;
+
+function sendMail() {
+  // Récupérer les valeurs des champs
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var message = document.getElementById("message").value;
+
+  // Envoyer l'e-mail via EmailJS
+  emailjs
+    .send("service_c7zq8tq", "service_c7zq8tq", {
+      from_name: name,
+      from_email: email,
+      message: message,
+    })
+    .then(
+      function (response) {
+        console.log("SUCCESS!", response.status, response.text);
+      },
+      function (error) {
+        console.log("FAILED...", error);
+      }
+    );
+}

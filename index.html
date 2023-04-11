@@ -37,13 +37,6 @@
 
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet" />
-
-    <!-- =======================================================
-  * Template Name: MyResume - v4.9.1
-  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
   </head>
 
   <body>
@@ -744,18 +737,43 @@
                 <h3>Discutons en autour d'un café</h3>
                 <div class="row align-items-center gy-4 mt-5">
                   <div class="col-12 offset-md-1 col-md-6">
-                    <div class="col-12">
-                      <a
-                        href="mailto:elim.florvil@icloud.com"
-                        target="”_blank”"
-                        class="text-decoration-none text-dark"
-                        ><button
+                    <form>
+                      <div class="form-group">
+                        <label for="name">Nom</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="name"
+                          required
+                        />
+                      </div>
+                      <div class="form-group">
+                        <label for="email">Adresse e-mail</label>
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="email"
+                          required
+                        />
+                      </div>
+                      <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea
+                          class="form-control"
+                          id="message"
+                          rows="5"
+                          required
+                        ></textarea>
+                      </div>
+                      <div class="form-group">
+                        <button
+                          onclick="sendMail()"
                           class="button-three w-100 btn btn-outline-info"
                         >
-                          Contactez Moi
-                        </button></a
-                      >
-                    </div>
+                          Envoyer
+                        </button>
+                      </div>
+                    </form>
                   </div>
                 </div>
               </div>
@@ -820,7 +838,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-
+    <script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
   </body>
