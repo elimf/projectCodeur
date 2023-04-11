@@ -608,29 +608,6 @@ document.querySelector(
                         </div>
                      </div>
                   </div>`;
-
-function sendMail() {
-  // Récupérer les valeurs des champs
-  var name = document.getElementById("name").value;
-  var email = document.getElementById("email").value;
-  var message = document.getElementById("message").value;
-
-  // Envoyer l'e-mail via EmailJS
-  emailjs
-    .send("service_c7zq8tq", "template_h2h9jpl", {
-      from_name: name,
-      from_email: email,
-      message: message,
-    })
-    .then(
-      function (response) {
-        console.log("SUCCESS!", response.status, response.text);
-      },
-      function (error) {
-        console.log("FAILED...", error);
-      }
-    );
-}
 function onEmailJsLoad() {
   console.log("EmailJS loaded.");
 }

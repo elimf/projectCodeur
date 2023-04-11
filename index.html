@@ -737,7 +737,7 @@
                 <h3>Discutons en autour d'un café</h3>
                 <div class="row align-items-center gy-4 mt-5">
                   <div class="col-12 offset-md-1 col-md-6">
-                    <form>
+                    <form onsubmit="sendMail(event)">
                       <div class="form-group">
                         <label for="name">Nom</label>
                         <input
@@ -766,10 +766,7 @@
                         ></textarea>
                       </div>
                       <div class="form-group">
-                        <button
-                          onclick="sendMail()"
-                          class="button-three w-100 btn btn-outline-info"
-                        >
+                        <button class="button-three w-100 btn btn-outline-info">
                           Envoyer
                         </button>
                       </div>
@@ -845,5 +842,39 @@
       src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"
       onload="onEmailJsLoad()"
     ></script>
+    <script>
+      emailjs.init("d4o_tC0lj5hA2nUfA");
+      function sendMail(event) {
+        // Empêcher le rechargement de la page
+        event.preventDefault();
+
+        // Récupérer les valeurs des champs
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var message = document.getElementById("message").value;
+
+        // Envoyer l'e-mail via EmailJS
+        emailjs
+          .send("service_c7zq8tq", "template_h2h9jpl", {
+            from_name: name,
+            from_email: email,
+            message: message,
+          })
+          .then(
+            function (response) {
+              console.log("SUCCESS!", response.status, response.text);
+              alert("Votre message a été envoyé !");
+              // Réinitialiser le formulaire
+              document.getElementById("name").value = "";
+              document.getElementById("email").value = "";
+              document.getElementById("message").value = "";
+            },
+            function (error) {
+              console.log("FAILED...", error);
+              alert("Une erreur est survenue. Veuillez réessayer plus tard.");
+            }
+          );
+      }
+    </script>
   </body>
 </html>
