@@ -363,8 +363,8 @@ var demoJson = {
           en: "Coding Factory of ESIEE-IT | Cergy",
         },
         sous_title: {
-          fr: "Préparation du titre certifié d’analyste développeur d’applications informatiques BAC+2",
-          en: "Preparation of the certified title of analyst developer of computer applications BAC + 2",
+          fr: "Préparation du titre certifié d’analyste développeur d’applications informatiques BAC+3",
+          en: "Preparation of the certified title of analyst developer of computer applications BAC + 3",
         },
         location2: {
           fr: "Cy Cergy Paris Université | Cergy-Pontoise",
