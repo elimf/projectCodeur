@@ -383,14 +383,18 @@ var demoJson = {
           en: "Scientific Baccalaureate option Computer Science and Digital Sciences",
         },
       },
-      experience: {
+      experience1: {
         title: {
           fr: "Experiences Professionelles",
           en: "Professional Experience",
         },
+        date: {
+          fr: "Janvier 2022 - Aout 2023",
+          en: "January 2022 - August 2023.",
+        },
         sous_title: {
-          fr: "Développeur fullstack en alternance",
-          en: "Part-time fullstack developer",
+          fr: "Développeur fullstack chez Coop-ère ( en alternance)",
+          en: "Fullstack Developer at Coop-ère (Apprenticeship)",
         },
         task1: {
           fr: "Création d'une API en Symfony pour une application mobile développé en Flutter",
@@ -403,6 +407,28 @@ var demoJson = {
         task3: {
           fr: "Création d'un espace admin ",
           en: "Creation of an admin space",
+        },
+      },
+      experience2: {
+        date: {
+          fr: "Septembre 2023",
+          en: "September 2023 - ",
+        },
+        sous_title: {
+          fr: "Développeur fullstack chez CeoVision (en alternance)",
+          en: "Fullstack Developer at CeoVision (Apprenticeship)",
+        },
+        task1: {
+          fr: "",
+          en: "",
+        },
+        task2: {
+          fr: "",
+          en: "",
+        },
+        task3: {
+          fr: " ",
+          en: "",
         },
       },
     },
@@ -529,7 +555,7 @@ var demoJson = {
       }
     }
   };
-}.apply(window));
+}).apply(window);
 
 $(document).ready(function () {
   var i18n = new I18n();
