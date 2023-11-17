@@ -359,24 +359,24 @@ var demoJson = {
           en: "Education",
         },
         location: {
-          fr: "Coding Factory de ESIEE-IT | Cergy",
-          en: "Coding Factory of ESIEE-IT | Cergy",
+          fr: "Coding Factory de ESIEE-IT | Cergy (95)",
+          en: "Coding Factory of ESIEE-IT | Cergy (95)",
         },
         sous_title: {
           fr: "Préparation du titre certifié d’analyste développeur d’applications informatiques BAC+3",
           en: "Preparation of the certified title of analyst developer of computer applications BAC + 3",
         },
         location2: {
-          fr: "Cy Cergy Paris Université | Cergy-Pontoise",
-          en: "Cy Cergy Paris University | Cergy-Pontoise",
+          fr: "Cy Cergy Paris Université | Cergy-Pontoise (95)",
+          en: "Cy Cergy Paris University | Cergy-Pontoise (95)",
         },
         sous_title2: {
           fr: "Préparation Licence Mathématiques Informatique Physique Ingénierie",
           en: "Preparation License Mathematics Computer Science Physics Engineering ",
         },
         location3: {
-          fr: "Lycée Jules Ferry | Conflans Sainte Honorine",
-          en: "Jules Ferry High School | Conflans-Sainte-Honorine",
+          fr: "Lycée Jules Ferry | Conflans Sainte Honorine (78)",
+          en: "Jules Ferry High School | Conflans-Sainte-Honorine (78)",
         },
         sous_title3: {
           fr: "Baccalauréat Scientifique option Informatique et Sciences du Numérique",
