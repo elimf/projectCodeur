@@ -336,8 +336,8 @@ var demoJson = {
         en: "Mail :",
       },
       resume: {
-        fr: "Je prépare un titre certifié d’analyste développeur d’applications informatiques à la Coding Factory. De plus, j'essaye de me perfectioner à travers de petits projets afin de consolider mes bases sur mon temps libre ce qui me permettra à long terme d'être un développeur fullstack complet.",
-        en: "I am preparing a certified analyst title computer application developer at the Coding Factory. Moreover, I try to perfect myself through small projects in order to consolidate my bases on my free time which will allow me in the long term to be a complete fullstack developer.",
+        fr: "Fraichement diplomé d'un titre certifié d’analyste développeur d’applications informatiques à la Coding Factory. Je prépare un bachelor de Développeur web sécurité. De plus, j'essaye de me perfectioner à travers de petits projets afin de consolider mes bases sur mon temps libre ce qui me permettra à long terme d'être un développeur fullstack complet.",
+        en: "Freshly graduated with a certified title of analyst developer of computer applications at the Coding Factory. I am preparing a bachelor’s degree in Web Security Developer. In addition, I try to perfect myself through small projects to consolidate my bases on my free time which will allow me in the long term to be a full stack developer.",
       },
     },
     skils: {
