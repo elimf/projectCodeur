@@ -320,8 +320,8 @@ var demoJson = {
         en: "Phone :",
       },
       city: {
-        fr: "Ville :",
-        en: "City :",
+        fr: "Localisation :",
+        en: "Location :",
       },
       years: {
         fr: "Age :",
@@ -363,22 +363,30 @@ var demoJson = {
           en: "Coding Factory of ESIEE-IT | Cergy (95)",
         },
         sous_title: {
-          fr: "Préparation du titre certifié d’analyste développeur d’applications informatiques BAC+3",
-          en: "Preparation of the certified title of analyst developer of computer applications BAC + 3",
+          fr: "Préparation du bachelor développeur web sécurité BAC + 3",
+          en: "Preparation of the bachelor web security developer BAC + 3",
         },
         location2: {
+          fr: "Coding Factory de ESIEE-IT | Cergy (95)",
+          en: "Coding Factory of ESIEE-IT | Cergy (95)",
+        },
+        sous_title2: {
+          fr: "Obtention du titre certifié d’analyste développeur d’applications informatiques BAC+2",
+          en: "Obtained the certified title of analyst developer of computer applications BAC + 2",
+        },
+        location3: {
           fr: "Cy Cergy Paris Université | Cergy-Pontoise (95)",
           en: "Cy Cergy Paris University | Cergy-Pontoise (95)",
         },
-        sous_title2: {
+        sous_title3: {
           fr: "Préparation Licence Mathématiques Informatique Physique Ingénierie",
           en: "Preparation License Mathematics Computer Science Physics Engineering ",
         },
-        location3: {
+        location4: {
           fr: "Lycée Jules Ferry | Conflans Sainte Honorine (78)",
           en: "Jules Ferry High School | Conflans-Sainte-Honorine (78)",
         },
-        sous_title3: {
+        sous_title4: {
           fr: "Baccalauréat Scientifique option Informatique et Sciences du Numérique",
           en: "Scientific Baccalaureate option Computer Science and Digital Sciences",
         },
@@ -419,12 +427,12 @@ var demoJson = {
           en: "Fullstack Developer at CeoVision (Apprenticeship)",
         },
         task1: {
-          fr: "",
-          en: "",
+          fr: "Maintenance de la plateforme web",
+          en: "Maintenance of the web platform",
         },
         task2: {
-          fr: "",
-          en: "",
+          fr: "Ajout de nouvelles fonctionnalités", 
+          en: "Adding new features",
         },
         task3: {
           fr: " ",
