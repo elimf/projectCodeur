@@ -371,8 +371,8 @@ var demoJson = {
           en: "Coding Factory of ESIEE-IT | Cergy (95)",
         },
         sous_title2: {
-          fr: "Obtention du titre certifié d’analyste développeur d’applications informatiques BAC+2",
-          en: "Obtained the certified title of analyst developer of computer applications BAC + 2",
+          fr: "BAC+2 Analyste développeur d’applications informatiques",
+          en: "BAC+2 Analyst Developer of computer applications",
         },
         location3: {
           fr: "Cy Cergy Paris Université | Cergy-Pontoise (95)",
