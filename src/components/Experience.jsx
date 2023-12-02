@@ -46,8 +46,8 @@ export const Experience = (props) => {
   useFrame((state) => {
     let curSection = Math.floor(data.scroll.current * data.pages);
 
-    if (curSection > 3) {
-      curSection = 3;
+    if (curSection > 4) {
+      curSection = 4;
     }
 
     if (curSection !== section) {
@@ -56,17 +56,6 @@ export const Experience = (props) => {
 
     state.camera.position.x = cameraPositionX.get();
     state.camera.lookAt(cameraLookAtX.get(), 0, 0);
-
-    // const position = new THREE.Vector3();
-    // characterContainerAboutRef.current.getWorldPosition(position);
-    // console.log([position.x, position.y, position.z]);
-
-    // const quaternion = new THREE.Quaternion();
-    // characterContainerAboutRef.current.getWorldQuaternion(quaternion);
-    // const euler = new THREE.Euler();
-    // euler.setFromQuaternion(quaternion, "XYZ");
-
-    // console.log([euler.x, euler.y, euler.z]);
   });
 
   return (
@@ -88,21 +77,29 @@ export const Experience = (props) => {
           1: {
             y: -viewport.height + 0.5,
             x: 0,
-            z: 7,
+            z: 6,
             rotateX: 0,
             rotateY: 0,
             rotateZ: 0,
           },
           2: {
-            x: -2,
             y: -viewport.height * 2 + 0.5,
+            x: 0,
+            z: 6,
+            rotateX: 0,
+            rotateY: 0,
+            rotateZ: 0,
+          },
+          3: {
+            x: -2,
+            y: -viewport.height * 3 + 0.5,
             z: 0,
             rotateX: 0,
             rotateY: Math.PI / 2,
             rotateZ: 0,
           },
-          3: {
-            y: -viewport.height * 3 + 1,
+          4: {
+            y: -viewport.height * 4 + 1,
             x: 0.3,
             z: 8.5,
             rotateX: 0,
@@ -148,7 +145,7 @@ export const Experience = (props) => {
               transparent
               distort={0.4}
               speed={4}
-              color={"red"}
+              color={"yellow"}
             />
           </mesh>
         </Float>
@@ -160,7 +157,7 @@ export const Experience = (props) => {
               transparent
               distort={1}
               speed={5}
-              color="yellow"
+              color="purple"
             />
           </mesh>
         </Float>

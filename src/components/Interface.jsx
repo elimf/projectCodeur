@@ -34,6 +34,7 @@ export const Interface = (props) => {
   return (
     <div className="flex flex-col items-center w-screen">
       <AboutSection setSection={setSection} />
+      <ResumeSection />
       <SkillsSection />
       <ProjectsSection />
       <ContactSection />
@@ -114,10 +115,6 @@ const ResumeSection = () => {
 
 const skills = [
   {
-    title: "Scrum",
-    level: 100,
-  },
-  {
     title: "Git",
     level: 80,
   },
@@ -150,10 +147,10 @@ const skills = [
     title: "React Native",
     level: 30,
   },
-  {
-    title: "Unity",
-    level: 30,
-  },
+  // {
+  //   title: "Unity",
+  //   level: 30,
+  // },
 ];
 
 const SkillsSection = () => {
@@ -221,7 +218,7 @@ const ProjectsSection = () => {
 
   return (
     <Section>
-      <div className="flex w-full h-full gap-8 items-center justify-center">
+      <div className="flex w-full h-full my-24 gap-8 items-center justify-center">
         <button
           className="hover:text-indigo-600 transition-colors"
           onClick={previousProject}
