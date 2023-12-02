@@ -92,6 +92,26 @@ const AboutSection = (props) => {
   );
 };
 
+const ResumeSection = () => {
+  return (
+    <Section className="flex">
+      {/* Formation à gauche */}
+      <motion.div className="w-1/2 mr-4" whileInView={"visible"}>
+        <h2 className="text-5xl font-bold text-white">Formation</h2>
+        <div className="mt-8 space-y-4">{/* Contenu de la formation */}</div>
+      </motion.div>
+
+      {/* Expérience professionnelle à droite */}
+      <motion.div className="w-1/2 ml-4" whileInView={"visible"}>
+        <h2 className="text-5xl font-bold text-white">
+          Expérience professionnelle
+        </h2>
+        {/* Ajoutez votre contenu d'expérience professionnelle ici */}
+      </motion.div>
+    </Section>
+  );
+};
+
 const skills = [
   {
     title: "Scrum",
@@ -200,7 +220,7 @@ const ProjectsSection = () => {
   };
 
   return (
-    <Section >
+    <Section>
       <div className="flex w-full h-full gap-8 items-center justify-center">
         <button
           className="hover:text-indigo-600 transition-colors"
@@ -237,6 +257,7 @@ const ContactSection = () => {
             name="name"
             id="name"
             className="block w-full rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 p-3"
+            required
           />
           <label
             htmlFor="email"
@@ -249,6 +270,7 @@ const ContactSection = () => {
             name="email"
             id="email"
             className="block w-full rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 p-3"
+            required
           />
           <label
             htmlFor="email"
@@ -260,6 +282,7 @@ const ContactSection = () => {
             name="message"
             id="message"
             className="h-32 block w-full rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 p-3"
+            required
           />
           <button className="bg-indigo-600 text-white py-4 px-8 rounded-lg font-bold text-lg mt-16 ">
             Submit
