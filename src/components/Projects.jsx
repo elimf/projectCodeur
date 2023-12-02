@@ -12,52 +12,43 @@ export const projects = [
     url: "https://elimf.alwaysdata.net/",
     image: "img/portfolio/insta.png",
     tags: ["Php"],
-    description: "Recreating the Atmos Awwwards website with React Three Fiber",
   },
   {
     title: "Calculator",
     url: "https://codingcalcul.netlify.app",
     image: "img/portfolio/calculatrice.png",
     tags: ["Js"],
-    description: "Learn how to bake a 3D model with Blender and use it in r3f",
   },
   {
     title: "Rock Paper Scissor",
     url: "hhttps://rockpaperscissorf.netlify.app/",
     image: "img/portfolio/pfc.png",
-    description: "Learn how to use ReadyPlayerMe to create a 3D avatar",
   },
   {
     title: "Etch a sketch",
     url: "https://bejewelled-gumdrop-64f48c.netlify.app",
     image: "img/portfolio/etch.png",
-    description: "Use React Three Fiber to create a 3D game",
   },
   {
     title: "Coop-ere",
     url: "https://coopere-asso.org/",
     image: "img/project/MASCOTTE_info.svg",
     tags: ["Flutter", "Symfony"],
-    description: "Create a loading screen for your r3f projects",
   },
   {
     title: "Sneakers Addicts",
     url: "https://sneakersaddicts.netlify.app",
     image: "img/portfolio/sacai.png",
-
-    description: "Use React Three Fiber to create a 3D game",
   },
   {
     title: "Coding Shop",
     url: "https://codingshop.netlify.app",
     image: "img/portfolio/shop.png",
-    description: "Create a loading screen for your r3f projects",
   },
   {
     title: "Suika Game",
     url: "https://friendly-truffle-f08f3a.netlify.app/",
     image: "img/portfolio/watermelon.png",
-    description: "Create a loading screen for your r3f projects",
   },
 ];
 
