@@ -73,29 +73,29 @@ const Project = (props) => {
         onClick={() => window.open(project.url, "_blank")}
         ref={background}
       >
-        <planeGeometry args={[3.2, 3]} />
+        <planeGeometry args={[2, 2]} />
         <meshBasicMaterial color="black" transparent opacity={0.2} />
       </mesh>
       <Image
-        scale={[1.8, 1, 1]}
+        scale={[1.5, 1, 1]}
         url={project.image}
         toneMapped={false}
-        position-y={0.6}
-        zoom={0.9}
+        position-y={0.3}
+        zoom={0.5}
         transparent={true}
       />
       <Text
-        maxWidth={3}
+        maxWidth={2.5}
         anchorX={"left"}
         anchorY={"top"}
-        fontSize={0.2}
-        position={[-1, -0.3, 0]}
+        fontSize={0.16}
+        position={[-0.7, -0.3, 0]}
         color={highlighted ? "yellow" : "white"}
       >
         {project.title.toUpperCase()}
       </Text>
       {project.tags && (
-        <group position={[-1, -0.8, 0]}>
+        <group position={[0, -0.6, 0]}>
           {project.tags.map((tag, index) => (
             <Text
               key={index}
@@ -124,7 +124,7 @@ export const Projects = () => {
           key={"project_" + index}
           position={[index * 2.5, 3, -3]}
           animate={{
-            x: 0 + (index - currentProject) * 5.5,
+            x: 0 + (index - currentProject) * 2.5,
             y: currentProject === index ? 0 : -0.1,
             z: currentProject === index ? -2 : -3,
             rotateX: currentProject === index ? 0 : -Math.PI / 3,
