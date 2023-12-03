@@ -21,16 +21,38 @@ export function Avatar(props) {
   const { animations: standingAnimation } = useFBX(
     "animations/StandingIdle.fbx"
   );
-  const { animations: fallingAnimation } = useFBX(
-    "animations/FallingIdle.fbx"
+  const { animations: fallingAnimation } = useFBX("animations/FallingIdle.fbx");
+  const { animations: macarenaAnimation } = useFBX(
+    "animations/MacarenaDance.fbx"
+  );
+  const { animations: pointingAnimation } = useFBX(
+    "animations/PointingGesture.fbx"
+  );
+  const { animations: wavingAnimation } = useFBX(
+    "animations/WavingGesture.fbx"
+  );
+  const { animations: gangnamStyleAnimation } = useFBX(
+    "animations/GangnamStyle.fbx"
   );
 
   typingAnimation[0].name = "Typing";
   standingAnimation[0].name = "Standing";
   fallingAnimation[0].name = "Falling";
+  macarenaAnimation[0].name = "Macarena";
+  pointingAnimation[0].name = "Pointing";
+  wavingAnimation[0].name = "Waving";
+  gangnamStyleAnimation[0].name = "GangnamStyle";
 
   const { actions } = useAnimations(
-    [typingAnimation[0], standingAnimation[0], fallingAnimation[0]],
+    [
+      typingAnimation[0],
+      standingAnimation[0],
+      fallingAnimation[0],
+      macarenaAnimation[0],
+      pointingAnimation[0],
+      wavingAnimation[0],
+      gangnamStyleAnimation[0],
+    ],
     group
   );
 
@@ -59,7 +81,7 @@ export function Avatar(props) {
 
   return (
     <group {...props} ref={group} dispose={null}>
-      <group >
+      <group>
         <primitive object={nodes.Hips} />
         <skinnedMesh
           name="EyeLeft"

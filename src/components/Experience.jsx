@@ -38,8 +38,27 @@ export const Experience = (props) => {
   const [characterAnimation, setCharacterAnimation] = useState("Typing");
   useEffect(() => {
     setCharacterAnimation("Falling");
+
     setTimeout(() => {
-      setCharacterAnimation(section === 0 ? "Typing" : "Standing");
+      switch (section) {
+        case 0:
+          setCharacterAnimation("Typing");
+          break;
+        case 1:
+          setCharacterAnimation("GangnamStyle");
+          break;
+        case 2:
+          setCharacterAnimation("Pointing");
+          break;
+        case 3:
+          setCharacterAnimation("Macarena");
+          break;
+        case 4:
+          setCharacterAnimation("Waving");
+          break;
+        default:
+          setCharacterAnimation("Standing");
+      }
     }, 600);
   }, [section]);
 
@@ -103,7 +122,7 @@ export const Experience = (props) => {
             x: 0.3,
             z: 8.5,
             rotateX: 0,
-            rotateY: -Math.PI / 4,
+            rotateY:- Math.PI / 8,
             rotateZ: 0,
           },
         }}
@@ -132,7 +151,7 @@ export const Experience = (props) => {
       <motion.group
         position={[0, -1.5, -10]}
         animate={{
-          z: section === 1 ? 0 : -10,
+          z: section === 1 ? 0 : -20,
           y: section === 1 ? -viewport.height : -1.5,
         }}
       >

@@ -10,7 +10,7 @@ export const Background = () => {
   });
   const data = useScroll();
 
-  const tl = useRef();
+  const tl = useRef(null);
 
   useFrame(() => {
     tl.current.progress(data.scroll.current);

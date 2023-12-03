@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useAtom } from "jotai";
 import { currentProjectAtom, projects } from "./Projects";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import Typed from "typed.js";
 import emailjs from "emailjs-com";
 import "boxicons/css/boxicons.min.css";
@@ -36,19 +36,21 @@ const Section = (props) => {
 export const Interface = (props) => {
   const { setSection } = props;
   return (
-      <div className="flex flex-col items-center w-screen">
-        <AboutSection setSection={setSection} />
-        <ResumeSection />
-        <SkillsSection />
-        <ProjectsSection />
-        <ContactSection />
-      </div>
+    <div className="flex flex-col items-center w-screen">
+      <AboutSection setSection={setSection} />
+      <ResumeSection />
+      <SkillsSection />
+      <ProjectsSection />
+      <ContactSection />
+    </div>
   );
 };
 
 const AboutSection = (props) => {
+  const typedElement = useRef(null);
+
   useEffect(() => {
-    const typed = new Typed(".typed", {
+    const typed = new Typed(typedElement.current, {
       strings: ["Fullstack", "Back-end", "Front-end", "Mobile"],
       typeSpeed: 50,
       backSpeed: 25,
@@ -57,9 +59,10 @@ const AboutSection = (props) => {
     });
 
     return () => {
+      // Nettoyer Typed.js si nécessaire
       typed.destroy();
     };
-  }, []);
+  }, [typedElement]);
   const { setSection } = props;
   return (
     <Section>
@@ -81,7 +84,7 @@ const AboutSection = (props) => {
       >
         Je suis Développeur
         <br />
-        <span className="text-blue-600 px-1 italic typed"></span>
+        <span ref={typedElement} className="text-blue-600 px-1 italic "></span>
       </motion.p>
       <div className="flex space-x-4 mt-4">
         <motion.a
