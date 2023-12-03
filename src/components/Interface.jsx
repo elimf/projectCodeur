@@ -59,7 +59,6 @@ const AboutSection = (props) => {
     });
 
     return () => {
-      // Nettoyer Typed.js si nécessaire
       typed.destroy();
     };
   }, [typedElement]);
@@ -82,7 +81,7 @@ const AboutSection = (props) => {
           delay: 1.5,
         }}
       >
-        Je suis Développeur
+        I'm Developer
         <br />
         <span ref={typedElement} className="text-blue-600 px-1 italic "></span>
       </motion.p>
@@ -128,62 +127,93 @@ const AboutSection = (props) => {
 };
 
 const ResumeSection = () => {
+  const educationData = [
+    {
+      title: "Preparation of the bachelor web security developer BAC + 3",
+      institution: "Coding Factory of ESIEE-IT | Cergy (95)",
+      date: "2023 - 2024",
+    },
+    {
+      title: "BAC+2 Analyst Developer of computer applications",
+      institution: "Coding Factory of ESIEE-IT | Cergy (95)",
+      date: "2021 - 2023",
+    },
+    {
+      title:
+        "Preparation License Mathematics Computer Science Physics Engineering ",
+      institution: "Cy Cergy Paris University | Cergy-Pontoise (95)",
+      date: "2019 - 2021",
+    },
+    {
+      title:
+        "Scientific Baccalaureate option Computer Science and Digital Sciences",
+      institution: "Jules Ferry High School | Conflans-Sainte-Honorine (78)",
+      date: "2016 - 2019",
+    },
+  ];
+  const experienceData = [
+    {
+      title: "Fullstack Developer at CeoVision (Apprenticeship)",
+      company: "CeoVision",
+      date: "September 2023 - ",
+      responsibilities: [
+        "Maintenance of the web platform",
+        "Adding new features",
+      ],
+    },
+    {
+      title: "Fullstack Developer at Coop-ère (Apprenticeship)",
+      company: "Coop-ère",
+      date: "January 2022 - August 2023",
+      responsibilities: [
+        "Development of a cross-platform application",
+        "Creation of an API in Symfony for a mobile application developed in Flutter",
+      ],
+    },
+  ];
   return (
     <Section className="flex">
-      {/* Formation à gauche */}
-      <motion.div className="w-100  absolute right-0" whileInView={"visible"}>
-        <h2 className="text-5xl font-bold text-white">Formation</h2>
-        <div className="mt-8 space-y-4">
-          <div>
-            <h3 className="text-2xl font-semibold">
-              Baccalauréat en Informatique
-            </h3>
-            <p className="text-gray-300">Université XYZ, Année d'obtention</p>
-          </div>
-          <div>
-            <h3 className="text-2xl font-semibold">
-              Certificat en Développement Web
-            </h3>
-            <p className="text-gray-300">École ABC, Année d'obtention</p>
-          </div>
-          {/* Ajoutez d'autres formations au besoin */}
+      <motion.div
+        className="w-100 ml-2 md:ml-4 p-4 absolute right-0"
+        whileInView={"visible"}
+      >
+        <h2 className="text-4xl font-bold text-gray-300">Education</h2>
+        <div className=" space-y-4">
+          {educationData.map((education, index) => (
+            <div key={index}>
+              <h3 className="text-lg font-semibold text-blue-500">
+                {education.title}
+              </h3>
+              <p className="text-gray-300">{`${education.institution} - ${education.date}`}</p>
+            </div>
+          ))}
         </div>
       </motion.div>
 
       {/* Expérience professionnelle à droite */}
       <motion.div
-        className="w-1/2 ml-2 md:ml-4 p-4 absolute left-0"
+        className="w-100 ml-2 md:ml-4 p-4 absolute left-0"
         whileInView={"visible"}
       >
-        <h2 className="text-5xl font-bold text-white">
-          Expérience professionnelle
+        <h2 className="text-4xl font-bold text-gray-300">
+          Professional Experience
         </h2>
         <div className="mt-8 space-y-4">
-          <div>
-            <h3 className="text-2xl font-semibold">Développeur Web Senior</h3>
-            <p className="text-gray-300">
-              Entreprise XYZ, Date de début - Date de fin
-            </p>
-            <ul className="list-disc list-inside">
-              <li>Travail sur des projets de développement web</li>
-              <li>Collaboration avec une équipe multidisciplinaire</li>
-              {/* Ajoutez d'autres responsabilités et réalisations */}
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-2xl font-semibold">
-              Stagiaire en Informatique
-            </h3>
-            <p className="text-gray-300">
-              Entreprise ABC, Date de début - Date de fin
-            </p>
-            <ul className="list-disc list-inside">
-              <li>Assistance aux tâches de développement logiciel</li>
-              <li>Participation à des réunions d'équipe</li>
-              {/* Ajoutez d'autres responsabilités et réalisations */}
-            </ul>
-          </div>
-          {/* Ajoutez d'autres expériences professionnelles au besoin */}
+          {experienceData.map((experience, index) => (
+            <div key={index}>
+              <h3 className="text-2xl font-semibold text-blue-500">
+                {experience.title}
+              </h3>
+              <p className="text-gray-300">{`${experience.company}, ${experience.date}`}</p>
+              <ul className="list-disc list-inside">
+                {experience.responsibilities.map((responsibility, i) => (
+                  <li className="text-gray-300" key={i}>
+                    {responsibility}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </motion.div>
     </Section>

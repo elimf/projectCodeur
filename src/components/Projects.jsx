@@ -11,44 +11,55 @@ export const projects = [
     title: "Instagram",
     url: "https://elimf.alwaysdata.net/",
     image: "img/portfolio/insta.png",
-    tags: ["Php"],
+    tags: ["Php", "Bootstrap", "Mysql"],
   },
   {
     title: "Calculator",
     url: "https://codingcalcul.netlify.app",
     image: "img/portfolio/calculatrice.png",
-    tags: ["Js"],
+    tags: ["NodeJs", "Javascript"],
   },
   {
     title: "Rock Paper Scissor",
     url: "hhttps://rockpaperscissorf.netlify.app/",
     image: "img/portfolio/pfc.png",
+    tags: ["NodeJs", "Javascript"],
   },
   {
     title: "Etch a sketch",
     url: "https://bejewelled-gumdrop-64f48c.netlify.app",
     image: "img/portfolio/etch.png",
+    tags: ["NodeJs", "Javascript"],
   },
   {
     title: "Coop-ere",
     url: "https://coopere-asso.org/",
     image: "img/project/MASCOTTE_info.svg",
-    tags: ["Flutter", "Symfony"],
+    tags: ["Flutter", "Symfony", "Mysql"],
   },
   {
     title: "Sneakers Addicts",
     url: "https://sneakersaddicts.netlify.app",
     image: "img/portfolio/sacai.png",
+    tags: ["Vue", "Javascript"],
   },
   {
     title: "Coding Shop",
     url: "https://codingshop.netlify.app",
     image: "img/portfolio/shop.png",
+    tags: ["Javascript"],
   },
   {
     title: "Suika Game",
     url: "https://friendly-truffle-f08f3a.netlify.app/",
     image: "img/portfolio/watermelon.png",
+    tags: ["Javascript", "MatterJs"],
+  },
+  {
+    title: "shooter Island",
+    url: "https://elimf.itch.io/sho",
+    image: "img/portfolio/shooterIsland.jpeg",
+    tags: ["Unity", "C#"],
   },
 ];
 
@@ -73,7 +84,7 @@ const Project = (props) => {
         onClick={() => window.open(project.url, "_blank")}
         ref={background}
       >
-        <planeGeometry args={[2, 2]} />
+        <planeGeometry args={[2, 2.5]} />
         <meshBasicMaterial color="black" transparent opacity={0.2} />
       </mesh>
       <Image
@@ -81,7 +92,7 @@ const Project = (props) => {
         url={project.image}
         toneMapped={false}
         position-y={0.3}
-        zoom={0.5}
+        zoom={0.6}
         transparent={true}
       />
       <Text

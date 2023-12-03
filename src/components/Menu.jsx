@@ -29,17 +29,17 @@ export const Menu = (props) => {
       >
         <div className="flex-1 flex items-start justify-center flex-col gap-6 p-8">
           <MenuButton
-            label="About"
+            label="Home"
             onClick={() => onSectionChange(0)}
             isActive={activeSection === 0}
           />
           <MenuButton
-            label="Resume"
+            label="About Me"
             onClick={() => onSectionChange(1)}
             isActive={activeSection === 1}
           />
           <MenuButton
-            label="Skills"
+            label="Resume"
             onClick={() => onSectionChange(2)}
             isActive={activeSection === 2}
           />
@@ -60,7 +60,7 @@ export const Menu = (props) => {
 };
 
 const MenuButton = (props) => {
-  const { label, onClick, isActive } = props;
+  const { label, onClick, isActive,} = props;
   return (
     <button
       onClick={onClick}
