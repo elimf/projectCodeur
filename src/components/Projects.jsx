@@ -56,7 +56,7 @@ export const projects = [
     tags: ["Javascript", "MatterJs"],
   },
   {
-    title: "shooter Island",
+    title: "Shooter Island",
     url: "https://elimf.itch.io/sho",
     image: "img/portfolio/shooterIsland.jpeg",
     tags: ["Unity", "C#"],
