@@ -21,7 +21,7 @@ export const projects = [
   },
   {
     title: "Rock Paper Scissor",
-    url: "hhttps://rockpaperscissorf.netlify.app/",
+    url: "https://rockpaperscissorf.netlify.app/",
     image: "img/portfolio/pfc.png",
     tags: ["NodeJs", "Javascript"],
   },
