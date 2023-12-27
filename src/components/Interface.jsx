@@ -174,17 +174,24 @@ const ResumeSection = () => {
   return (
     <Section className="flex">
       <motion.div
-        className="w-100 ml-2 md:ml-4 p-4 absolute right-0"
+        className="w-100 ml-2 md:ml-4 p-4 absolute right-0 hidden xl:block"
         whileInView={"visible"}
       >
-        <h2 className="text-4xl font-bold text-gray-300">Education</h2>
-        <div className=" space-y-4">
+        <h2 className="text-2xl font-bold text-gray-300">Education</h2>
+        <div className=" mt-8 space-y-4">
           {educationData.map((education, index) => (
             <div key={index}>
-              <h3 className="text-lg font-semibold text-blue-500">
-                {education.title}
-              </h3>
-              <p className="text-gray-300">{`${education.institution} - ${education.date}`}</p>
+              <ol class="relative border-s border-gray-200 dark:border-gray-700">
+                <li class="mb-10 ms-4">
+                  <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                  <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+                    {education.date}
+                  </time>
+                  <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                    {education.title}
+                  </h3>
+                </li>
+              </ol>
             </div>
           ))}
         </div>
@@ -192,26 +199,33 @@ const ResumeSection = () => {
 
       {/* Expérience professionnelle à droite */}
       <motion.div
-        className="w-100 ml-2 md:ml-4 p-4 absolute left-0"
+        className="w-100 ml-2 md:ml-4 p-4 absolute left-0 hidden xl:block"
         whileInView={"visible"}
       >
-        <h2 className="text-4xl font-bold text-gray-300">
+        <h2 className="text-2xl font-bold text-gray-300">
           Professional Experience
         </h2>
         <div className="mt-8 space-y-4">
           {experienceData.map((experience, index) => (
             <div key={index}>
-              <h3 className="text-2xl font-semibold text-blue-500">
-                {experience.title}
-              </h3>
-              <p className="text-gray-300">{`${experience.company}, ${experience.date}`}</p>
-              <ul className="list-disc list-inside">
-                {experience.responsibilities.map((responsibility, i) => (
-                  <li className="text-gray-300" key={i}>
-                    {responsibility}
-                  </li>
-                ))}
-              </ul>
+              <ol class="relative border-s border-gray-200 dark:border-gray-700">
+                <li class="mb-10 ms-4">
+                  <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                  <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+                    {experience.date}
+                  </time>
+                  <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                    {experience.title}
+                  </h3>
+                  <p class="text-base font-normal text-gray-500 dark:text-gray-400">
+                    {experience.responsibilities.map((responsibility, i) => (
+                      <li className="text-gray-300" key={i}>
+                        {responsibility}
+                      </li>
+                    ))}
+                  </p>
+                </li>
+              </ol>
             </div>
           ))}
         </div>
