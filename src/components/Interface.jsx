@@ -166,15 +166,16 @@ const ResumeSection = () => {
       company: "Coop-ère",
       date: "January 2022 - August 2023",
       responsibilities: [
-        "Development of a cross-platform application",
-        "Creation of an API in Symfony for a mobile application developed in Flutter",
+        "Development of a cross-platform application (Flutter)",
+        "API in Symfony for backend",
       ],
     },
   ];
   return (
     <Section className="flex">
+      {/* */}
       <motion.div
-        className="w-100 ml-2 md:ml-4 p-4 absolute right-0 hidden xl:block"
+        className="w-100 lg:w-1/3 xl:w-1/4 ml-2 md:ml-4 p-4 absolute right-0 hidden md:block "
         whileInView={"visible"}
       >
         <h2 className="text-2xl font-bold text-gray-300">Education</h2>
@@ -187,7 +188,7 @@ const ResumeSection = () => {
                   <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
                     {education.date}
                   </time>
-                  <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                  <h3 class="text-md font-semibold text-gray-900 dark:text-white">
                     {education.title}
                   </h3>
                 </li>
@@ -199,7 +200,7 @@ const ResumeSection = () => {
 
       {/* Expérience professionnelle à droite */}
       <motion.div
-        className="w-100 ml-2 md:ml-4 p-4 absolute left-0 hidden xl:block"
+        className="w-100 lg:w-1/3 xl:w-1/4 ml-2 md:ml-4 p-4 absolute left-0 hidden md:block"
         whileInView={"visible"}
       >
         <h2 className="text-2xl font-bold text-gray-300">
@@ -220,7 +221,7 @@ const ResumeSection = () => {
                   <p class="text-base font-normal text-gray-500 dark:text-gray-400">
                     {experience.responsibilities.map((responsibility, i) => (
                       <li className="text-gray-300" key={i}>
-                        {responsibility}
+                        - {responsibility}
                       </li>
                     ))}
                   </p>
@@ -278,12 +279,12 @@ const SkillsSection = () => {
   return (
     <Section>
       <motion.div whileInView={"visible"}>
-        <h2 className="text-4xl font-bold text-white">Skills</h2>
+        <h2 className="text-3xl font-bold text-white">Skills</h2>
         <div className=" mt-8 space-y-4">
           {skills.map((skill, index) => (
             <div className="w-64" key={index}>
               <motion.h3
-                className="text-lg font-bold text-gray-100"
+                className="text-sm font-bold text-gray-100"
                 initial={{
                   opacity: 0,
                 }}
@@ -301,7 +302,7 @@ const SkillsSection = () => {
               </motion.h3>
               <div className="h-2 w-full bg-gray-200 rounded-full mt-2">
                 <motion.div
-                  className="h-full bg-indigo-500 rounded-full "
+                  className="h-full bg-sky-500 rounded-full "
                   style={{ width: `${skill.level}%` }}
                   initial={{
                     scaleX: 0,
