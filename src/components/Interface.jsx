@@ -129,6 +129,11 @@ const AboutSection = (props) => {
 const ResumeSection = () => {
   const educationData = [
     {
+      title: "Preparation master lead developper BAC + 5",
+      institution: "Coding Factory of ESIEE-IT | Cergy (95)",
+      date: "2024 - 2026",
+    },
+    {
       title: "Preparation of the bachelor web security developer BAC + 3",
       institution: "Coding Factory of ESIEE-IT | Cergy (95)",
       date: "2023 - 2024",
@@ -137,18 +142,6 @@ const ResumeSection = () => {
       title: "BAC+2 Analyst Developer of computer applications",
       institution: "Coding Factory of ESIEE-IT | Cergy (95)",
       date: "2021 - 2023",
-    },
-    {
-      title:
-        "Preparation License Mathematics Computer Science Physics Engineering ",
-      institution: "Cy Cergy Paris University | Cergy-Pontoise (95)",
-      date: "2019 - 2021",
-    },
-    {
-      title:
-        "Scientific Baccalaureate option Computer Science and Digital Sciences",
-      institution: "Jules Ferry High School | Conflans-Sainte-Honorine (78)",
-      date: "2016 - 2019",
     },
   ];
   const experienceData = [
