@@ -51,7 +51,7 @@ const AboutSection = (props) => {
 
   useEffect(() => {
     const typed = new Typed(typedElement.current, {
-      strings: ["Fullstack", "Back-end", "Front-end", "Mobile"],
+      strings: ["Fullstack", "Back-end", "Mobile", "Lead"],
       typeSpeed: 50,
       backSpeed: 25,
       backDelay: 2000,
@@ -93,6 +93,14 @@ const AboutSection = (props) => {
           whileHover={{ scale: 1.1 }}
         >
           <i className="bx bxl-github text-white"></i>
+        </motion.a>
+        <motion.a
+          href="https://gitlab.com/elimf"
+          className="google-plus p-1 bg-gray-800 rounded-full"
+          target="_blank"
+          whileHover={{ scale: 1.1 }}
+        >
+          <i className="bx bxl-gitlab text-white"></i>
         </motion.a>
         <motion.a
           href="https://www.linkedin.com/in/elimflorvil/"
