@@ -8,12 +8,6 @@ import { useEffect, useRef } from "react";
 
 export const projects = [
   {
-    title: "Instagram",
-    url: "https://elimf.alwaysdata.net/",
-    image: "img/portfolio/insta.png",
-    tags: ["Php", "Bootstrap", "Mysql"],
-  },
-  {
     title: "Calculator",
     url: "https://codingcalcul.netlify.app",
     image: "img/portfolio/calculatrice.png",
@@ -44,22 +38,10 @@ export const projects = [
     tags: ["Vue", "Javascript"],
   },
   {
-    title: "Coding Shop",
-    url: "https://codingshop.netlify.app",
-    image: "img/portfolio/shop.png",
-    tags: ["Javascript"],
-  },
-  {
     title: "Suika Game",
     url: "https://friendly-truffle-f08f3a.netlify.app/",
     image: "img/portfolio/watermelon.png",
     tags: ["Javascript", "MatterJs"],
-  },
-  {
-    title: "Shooter Island",
-    url: "https://elimf.itch.io/sho",
-    image: "img/portfolio/shooterIsland.jpeg",
-    tags: ["Unity", "C#"],
   },
 ];
 
