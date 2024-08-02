@@ -1,7 +1,7 @@
 {
-  "name": "r3f-vite-starter",
+  "name": "portfolio",
   "private": true,
-  "version": "1.0.0",
+  "version": "2.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@react-three/drei": "9.75.0",
+    "@react-three/drei": "^9.109.2",
     "@react-three/fiber": "8.13.3",
     "boxicons": "^2.1.4",
     "emailjs-com": "^3.2.0",
