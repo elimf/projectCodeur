@@ -43,6 +43,12 @@ export const projects = [
     image: "img/portfolio/watermelon.png",
     tags: ["Javascript", "MatterJs"],
   },
+  {
+    title: "FootballStats360",
+    url: "https://foot-stats360-vgyv.vercel.app/",
+    image: "img/portfolio/football.svg",
+    tags: ["Javascript", "React"],
+  }
 ];
 
 const Project = (props) => {
