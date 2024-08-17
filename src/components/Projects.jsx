@@ -52,7 +52,7 @@ export const projects = [
   {
     title: "After Party",
     url: "https://after-party.vercel.app/",
-    image: "img/portfolio/portfolio.png",
+    image: "img/portfolio/after_party.jpeg",
     tags: ["React", "Javascript"],
   }
 ];
