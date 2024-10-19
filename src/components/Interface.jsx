@@ -137,12 +137,12 @@ const AboutSection = (props) => {
 const ResumeSection = () => {
   const educationData = [
     {
-      title: "Preparation master lead developper BAC + 5",
+      title: "Preparation Master Manager of computer engineering (option lead developper) BAC + 5",
       institution: "Coding Factory of ESIEE-IT | Cergy (95)",
       date: "2024 - 2026",
     },
     {
-      title: "Preparation of the bachelor web security developer BAC + 3",
+      title: "Bachelor web security developer BAC + 3",
       institution: "Coding Factory of ESIEE-IT | Cergy (95)",
       date: "2023 - 2024",
     },
@@ -154,16 +154,25 @@ const ResumeSection = () => {
   ];
   const experienceData = [
     {
-      title: "Fullstack Developer at CeoVision (Apprenticeship)",
+      title: "Developer of innovative public transport data visualization tool (Apprenticeship)",
+      company: "SNCF",
+      date: "October 2024 - ",
+      responsibilities: [
+        "Implement new ways to visualize data ",
+        "Use and implement algorthmiths for transport data "
+      ],
+    },
+    {
+      title: "Fullstack Developer (Apprenticeship)",
       company: "CeoVision",
-      date: "September 2023 - ",
+      date: "September 2023 - August 2024",
       responsibilities: [
         "Maintenance of the web platform",
         "Adding new features",
       ],
     },
     {
-      title: "Fullstack Developer at Coop-ère (Apprenticeship)",
+      title: "Fullstack Developer (Apprenticeship)",
       company: "Coop-ère",
       date: "January 2022 - August 2023",
       responsibilities: [
@@ -199,7 +208,7 @@ const ResumeSection = () => {
         </div>
       </motion.div>
 
-      {/* Expérience professionnelle à droite */}
+      {/* Expérience professionnelle à gauche */}
       <motion.div
         className="w-100 lg:w-1/3 xl:w-1/4 ml-2 md:ml-4 p-4 absolute left-0 hidden md:block"
         whileInView={"visible"}
