@@ -28,7 +28,7 @@ function App() {
         }}
       >
         <Canvas
-          className="hidden md:block"
+          className="hidden lg:block"
           shadows
           camera={{ position: [0, 3, 10], fov: 42 }}
         >
@@ -50,7 +50,7 @@ function App() {
           activeSection={section}
         />
         <ForMobile />
-        <Cursor className="hidden md:block" />
+        <Cursor className="hidden lg:block" />
       </MotionConfig>
       <Leva hidden />
     </>
