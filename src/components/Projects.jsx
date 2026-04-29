@@ -43,18 +43,24 @@ export const projects = [
     image: "img/portfolio/watermelon.png",
     tags: ["Javascript", "MatterJs"],
   },
+  {
+    title: "Odyssea Web Site",
+    url: "https://odyssea-web-site.vercel.app/",
+    image: "img/portfolio/odyssea.jpeg",
+    tags: ["Angular", " NestJS", "PostgreSQL"],
+  },
   // {
   //   title: "FootballStats360",
   //   url: "https://foot-stats360-vgyv.vercel.app/",
   //   image: "img/portfolio/football.svg",
   //   tags: ["Javascript", "React"],
   // },
-  {
-    title: "After Party",
-    url: "https://after-party.vercel.app/",
-    image: "img/portfolio/after_party.jpeg",
-    tags: ["React", "Javascript"],
-  }
+  // {
+  //   title: "After Party",
+  //   url: "https://after-party.vercel.app/",
+  //   image: "img/portfolio/after_party.jpeg",
+  //   tags: ["React", "Javascript"],
+  // }
 ];
 
 const Project = (props) => {

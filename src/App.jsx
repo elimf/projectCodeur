@@ -15,10 +15,26 @@ import ForMobile from "./components/ForMobile";
 function App() {
   const [section, setSection] = useState(0);
   const [menuOpened, setMenuOpened] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     setMenuOpened(false);
   }, [section]);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 1023px)");
+
+    const handleMediaQueryChange = (event) => {
+      setIsMobile(event.matches);
+    };
+
+    setIsMobile(mediaQuery.matches);
+    mediaQuery.addEventListener("change", handleMediaQueryChange);
+
+    return () => {
+      mediaQuery.removeEventListener("change", handleMediaQueryChange);
+    };
+  }, []);
 
   return (
     <>
@@ -27,30 +43,31 @@ function App() {
           ...framerMotionConfig,
         }}
       >
-        <Canvas
-          className="hidden lg:block"
-          shadows
-          camera={{ position: [0, 3, 10], fov: 42 }}
-        >
-          <color attach="background" args={["#e6e7ff"]} />
-          <ScrollControls pages={5} damping={0.1}>
-            <ScrollManager section={section} onSectionChange={setSection} />
-            <Scroll>
-              <Experience section={section} menuOpened={menuOpened} />
-            </Scroll>
-            <Scroll html>
-              <Interface setSection={setSection} />
-            </Scroll>
-          </ScrollControls>
-        </Canvas>
-        <Menu
-          onSectionChange={setSection}
-          menuOpened={menuOpened}
-          setMenuOpened={setMenuOpened}
-          activeSection={section}
-        />
-        <ForMobile />
-        <Cursor className="hidden lg:block" />
+        {isMobile ? (
+          <ForMobile />
+        ) : (
+          <>
+            <Canvas shadows camera={{ position: [0, 3, 10], fov: 42 }}>
+              <color attach="background" args={["#e6e7ff"]} />
+              <ScrollControls pages={5} damping={0.1}>
+                <ScrollManager section={section} onSectionChange={setSection} />
+                <Scroll>
+                  <Experience section={section} menuOpened={menuOpened} />
+                </Scroll>
+                <Scroll html>
+                  <Interface setSection={setSection} />
+                </Scroll>
+              </ScrollControls>
+            </Canvas>
+            <Menu
+              onSectionChange={setSection}
+              menuOpened={menuOpened}
+              setMenuOpened={setMenuOpened}
+              activeSection={section}
+            />
+            <Cursor className="hidden lg:block" />
+          </>
+        )}
       </MotionConfig>
       <Leva hidden />
     </>
