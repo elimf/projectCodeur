@@ -16,6 +16,7 @@ function App() {
   const [section, setSection] = useState(0);
   const [menuOpened, setMenuOpened] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [language, setLanguage] = useState("en");
 
   useEffect(() => {
     setMenuOpened(false);
@@ -36,6 +37,19 @@ function App() {
     };
   }, []);
 
+  useEffect(() => {
+    const savedLanguage = window.localStorage.getItem("portfolio-language");
+    const browserLanguage = window.navigator.language?.toLowerCase().startsWith("fr")
+      ? "fr"
+      : "en";
+
+    setLanguage(savedLanguage === "fr" || savedLanguage === "en" ? savedLanguage : browserLanguage);
+  }, []);
+
+  useEffect(() => {
+    window.localStorage.setItem("portfolio-language", language);
+  }, [language]);
+
   return (
     <>
       <MotionConfig
@@ -44,7 +58,7 @@ function App() {
         }}
       >
         {isMobile ? (
-          <ForMobile />
+          <ForMobile language={language} setLanguage={setLanguage} />
         ) : (
           <>
             <Canvas shadows camera={{ position: [0, 3, 10], fov: 42 }}>
@@ -55,7 +69,7 @@ function App() {
                   <Experience section={section} menuOpened={menuOpened} />
                 </Scroll>
                 <Scroll html>
-                  <Interface setSection={setSection} />
+                  <Interface language={language} setSection={setSection} />
                 </Scroll>
               </ScrollControls>
             </Canvas>
@@ -64,6 +78,8 @@ function App() {
               menuOpened={menuOpened}
               setMenuOpened={setMenuOpened}
               activeSection={section}
+              language={language}
+              setLanguage={setLanguage}
             />
             <Cursor className="hidden lg:block" />
           </>

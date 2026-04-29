@@ -5,53 +5,7 @@ import Typed from "typed.js";
 import emailjs from "emailjs-com";
 import "boxicons/css/boxicons.min.css";
 import { currentProjectAtom, projects } from "./Projects";
-
-const educationData = [
-  {
-    title:
-      "Preparation Master Manager of computer engineering (option lead developper) BAC + 5",
-    institution: "Coding Factory of ESIEE-IT | Cergy (95)",
-    date: "2024 - 2026",
-  },
-  {
-    title: "Bachelor web security developer BAC + 3",
-    institution: "Coding Factory of ESIEE-IT | Cergy (95)",
-    date: "2023 - 2024",
-  },
-  {
-    title: "BAC+2 Analyst Developer of computer applications",
-    institution: "Coding Factory of ESIEE-IT | Cergy (95)",
-    date: "2021 - 2023",
-  },
-];
-
-const experienceData = [
-  {
-    title:
-      "Developer of innovative public transport data visualization tool (Apprenticeship)",
-    company: "SNCF",
-    date: "October 2024 - ",
-    responsibilities: [
-      "Implement new ways to visualize data",
-      "Use and implement algorthmiths for transport data",
-    ],
-  },
-  {
-    title: "Fullstack Developer (Apprenticeship)",
-    company: "CeoVision",
-    date: "September 2023 - August 2024",
-    responsibilities: ["Maintenance of the web platform", "Adding new features"],
-  },
-  {
-    title: "Fullstack Developer (Apprenticeship)",
-    company: "Coop-ere",
-    date: "January 2022 - August 2023",
-    responsibilities: [
-      "Development of a cross-platform application (Flutter)",
-      "API in Symfony for backend",
-    ],
-  },
-];
+import { translations } from "../i18n";
 
 const skills = [
   { title: "Git", level: 80 },
@@ -62,14 +16,6 @@ const skills = [
   { title: "Android", level: 40 },
   { title: "Vue", level: 40 },
   { title: "React Native", level: 30 },
-];
-
-const navigationItems = [
-  { label: "Home", href: "#home" },
-  { label: "Resume", href: "#resume" },
-  { label: "Skills", href: "#skills" },
-  { label: "Projects", href: "#projects" },
-  { label: "Contact", href: "#contact" },
 ];
 
 const sectionClassNames = {
@@ -112,28 +58,37 @@ const Section = ({ children, className = "", id, isMobile = false }) => {
   );
 };
 
-export const Interface = ({ isMobile = false, setSection }) => {
+export const Interface = ({ isMobile = false, setSection, language = "en" }) => {
+  const t = translations[language];
+  const navigationItems = [
+    { label: t.menu.home, href: "#home" },
+    { label: t.menu.resume, href: "#resume" },
+    { label: t.menu.skills, href: "#skills" },
+    { label: t.menu.projects, href: "#projects" },
+    { label: t.menu.contact, href: "#contact" },
+  ];
+
   return (
     <div
       className={`${
         isMobile ? "w-full overflow-x-hidden bg-slate-950 text-white" : "w-screen"
       } flex flex-col items-center`}
     >
-      {isMobile ? <MobileNavigation /> : null}
-      <AboutSection isMobile={isMobile} setSection={setSection} />
-      <ResumeSection isMobile={isMobile} />
-      <SkillsSection isMobile={isMobile} />
-      <ProjectsSection isMobile={isMobile} />
-      <ContactSection isMobile={isMobile} />
+      {isMobile ? <MobileNavigation items={navigationItems} /> : null}
+      <AboutSection isMobile={isMobile} setSection={setSection} t={t} />
+      <ResumeSection isMobile={isMobile} t={t} />
+      <SkillsSection isMobile={isMobile} t={t} />
+      <ProjectsSection isMobile={isMobile} t={t} />
+      <ContactSection isMobile={isMobile} t={t} />
     </div>
   );
 };
 
-const MobileNavigation = () => {
+const MobileNavigation = ({ items }) => {
   return (
     <div className="w-full px-4 pt-4">
       <nav className="mx-auto flex max-w-6xl flex-wrap gap-2">
-        {navigationItems.map((item) => (
+        {items.map((item) => (
           <a
             key={item.href}
             href={item.href}
@@ -147,12 +102,12 @@ const MobileNavigation = () => {
   );
 };
 
-const AboutSection = ({ isMobile, setSection }) => {
+const AboutSection = ({ isMobile, setSection, t }) => {
   const typedElement = useRef(null);
 
   useEffect(() => {
     const typed = new Typed(typedElement.current, {
-      strings: ["Fullstack", "Back-end", "Mobile", "Lead"],
+      strings: t.hero.typed,
       typeSpeed: 50,
       backSpeed: 25,
       backDelay: 2000,
@@ -162,7 +117,7 @@ const AboutSection = ({ isMobile, setSection }) => {
     return () => {
       typed.destroy();
     };
-  }, []);
+  }, [t.hero.typed]);
 
   const handleContactClick = () => {
     if (isMobile) {
@@ -187,7 +142,7 @@ const AboutSection = ({ isMobile, setSection }) => {
           isMobile ? "text-sm tracking-[0.35em] text-sky-300" : "text-base text-gray-600"
         } uppercase`}
       >
-        Fullstack Developer
+        {t.hero.role}
       </p>
       <h1
         className={`${
@@ -205,7 +160,7 @@ const AboutSection = ({ isMobile, setSection }) => {
         transition={{ duration: 1, delay: 0.6 }}
         viewport={{ once: true }}
       >
-        I&apos;m Developer
+        {t.hero.intro}
         <br />
         <span
           ref={typedElement}
@@ -217,8 +172,7 @@ const AboutSection = ({ isMobile, setSection }) => {
           isMobile ? "mt-6 max-w-xl text-base text-slate-300" : "hidden"
         }`}
       >
-        Mobile version without the 3D scene, focused on fast access to my
-        profile, experience, projects and contact details.
+        {t.hero.mobileDescription}
       </p>
       <div className="mt-6 flex flex-wrap gap-4">
         <motion.a
@@ -259,7 +213,7 @@ const AboutSection = ({ isMobile, setSection }) => {
         transition={{ duration: 1, delay: 0.8 }}
         viewport={{ once: true }}
       >
-        Contact me
+        {t.hero.contact}
       </motion.button>
     </Section>
   );
@@ -282,17 +236,20 @@ const TimelineCard = ({ item, titleSize = "text-lg", subtitleKey }) => {
   );
 };
 
-const ResumeSection = ({ isMobile }) => {
+const ResumeSection = ({ isMobile, t }) => {
+  const educationData = t.educationData;
+  const experienceData = t.experienceData;
+
   if (isMobile) {
     return (
       <Section id="resume" isMobile className="gap-10">
         <div>
-          <p className="text-sm uppercase tracking-[0.3em] text-sky-300">Resume</p>
-          <h2 className="mt-3 text-4xl font-bold text-white">Education and experience</h2>
+          <p className="text-sm uppercase tracking-[0.3em] text-sky-300">{t.resume.eyebrow}</p>
+          <h2 className="mt-3 text-4xl font-bold text-white">{t.resume.title}</h2>
         </div>
         <div className="grid w-full gap-8 lg:grid-cols-2">
           <div className="space-y-4">
-            <h3 className="text-xl font-semibold text-slate-100">Education</h3>
+            <h3 className="text-xl font-semibold text-slate-100">{t.resume.education}</h3>
             {educationData.map((education) => (
               <TimelineCard
                 key={`${education.title}-${education.date}`}
@@ -303,7 +260,7 @@ const ResumeSection = ({ isMobile }) => {
             ))}
           </div>
           <div className="space-y-4">
-            <h3 className="text-xl font-semibold text-slate-100">Professional Experience</h3>
+            <h3 className="text-xl font-semibold text-slate-100">{t.resume.experience}</h3>
             {experienceData.map((experience) => (
               <TimelineCard
                 key={`${experience.title}-${experience.date}`}
@@ -323,7 +280,7 @@ const ResumeSection = ({ isMobile }) => {
         className="absolute right-0 hidden p-4 md:ml-4 md:block lg:w-1/3 xl:w-1/4"
         whileInView="visible"
       >
-        <h2 className="text-2xl font-bold text-gray-300">Education</h2>
+        <h2 className="text-2xl font-bold text-gray-300">{t.resume.education}</h2>
         <div className="mt-8 space-y-4">
           {educationData.map((education) => (
             <div key={`${education.title}-${education.date}`}>
@@ -347,7 +304,7 @@ const ResumeSection = ({ isMobile }) => {
         className="absolute left-0 hidden p-4 md:ml-4 md:block lg:w-1/3 xl:w-1/4"
         whileInView="visible"
       >
-        <h2 className="text-2xl font-bold text-gray-300">Professional Experience</h2>
+        <h2 className="text-2xl font-bold text-gray-300">{t.resume.experience}</h2>
         <div className="mt-8 space-y-4">
           {experienceData.map((experience) => (
             <div key={`${experience.title}-${experience.date}`}>
@@ -380,12 +337,12 @@ const ResumeSection = ({ isMobile }) => {
   );
 };
 
-const SkillsSection = ({ isMobile }) => {
+const SkillsSection = ({ isMobile, t }) => {
   return (
     <Section id="skills" isMobile={isMobile}>
       <motion.div whileInView="visible">
         <h2 className={`font-bold ${isMobile ? "text-4xl text-white" : "text-3xl text-white"}`}>
-          Skills
+          {t.skills.title}
         </h2>
         <div className="mt-8 grid gap-4 sm:grid-cols-2">
           {skills.map((skill, index) => (
@@ -432,7 +389,7 @@ const SkillsSection = ({ isMobile }) => {
   );
 };
 
-const ProjectsSection = ({ isMobile }) => {
+const ProjectsSection = ({ isMobile, t }) => {
   const [currentProject, setCurrentProject] = useAtom(currentProjectAtom);
 
   const nextProject = () => {
@@ -447,8 +404,8 @@ const ProjectsSection = ({ isMobile }) => {
     return (
       <Section id="projects" isMobile className="gap-8">
         <div>
-          <p className="text-sm uppercase tracking-[0.3em] text-sky-300">Projects</p>
-          <h2 className="mt-3 text-4xl font-bold text-white">Selected work</h2>
+          <p className="text-sm uppercase tracking-[0.3em] text-sky-300">{t.projects.eyebrow}</p>
+          <h2 className="mt-3 text-4xl font-bold text-white">{t.projects.title}</h2>
         </div>
         <div className="grid w-full grid-cols-2 gap-4 max-[420px]:grid-cols-1">
           {projects.map((project) => (
@@ -493,21 +450,21 @@ const ProjectsSection = ({ isMobile }) => {
           className="transition-colors hover:text-indigo-600"
           onClick={previousProject}
         >
-          ← Previous
+          {t.projects.previous}
         </button>
-        <h2 className="text-5xl font-bold">Projects</h2>
+        <h2 className="text-5xl font-bold">{t.projects.desktopTitle}</h2>
         <button
           className="transition-colors hover:text-indigo-600"
           onClick={nextProject}
         >
-          Next →
+          {t.projects.next}
         </button>
       </div>
     </Section>
   );
 };
 
-const ContactSection = ({ isMobile }) => {
+const ContactSection = ({ isMobile, t }) => {
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -520,11 +477,11 @@ const ContactSection = ({ isMobile }) => {
       })
       .then(
         (result) => {
-          alert("Email sent successfully!");
+          alert(t.contact.success);
           console.log("Email sent successfully:", result);
         },
         () => {
-          alert("Error sending email. Please try again.");
+          alert(t.contact.error);
         }
       );
 
@@ -534,7 +491,7 @@ const ContactSection = ({ isMobile }) => {
   return (
     <Section id="contact" isMobile={isMobile}>
       <h2 className={`font-bold ${isMobile ? "text-4xl text-white" : "text-5xl"}`}>
-        Contact me
+        {t.contact.title}
       </h2>
       <div
         className={`mt-8 rounded-3xl p-8 ${
@@ -550,7 +507,7 @@ const ContactSection = ({ isMobile }) => {
               isMobile ? "text-slate-100" : "text-gray-900"
             }`}
           >
-            Name
+            {t.contact.name}
           </label>
           <input
             type="text"
@@ -565,7 +522,7 @@ const ContactSection = ({ isMobile }) => {
               isMobile ? "text-slate-100" : "text-gray-900"
             }`}
           >
-            Email
+            {t.contact.email}
           </label>
           <input
             type="email"
@@ -579,7 +536,7 @@ const ContactSection = ({ isMobile }) => {
               isMobile ? "text-slate-100" : "text-gray-900"
             }`}
           >
-            Message
+            {t.contact.message}
           </label>
           <textarea
             name="message"
@@ -592,7 +549,7 @@ const ContactSection = ({ isMobile }) => {
               isMobile ? "bg-sky-400 text-slate-950" : "bg-indigo-600 text-white"
             }`}
           >
-            Submit
+            {t.contact.submit}
           </button>
         </form>
       </div>
