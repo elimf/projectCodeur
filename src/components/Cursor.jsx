@@ -9,9 +9,14 @@ let outlineY = 0;
 
 export const Cursor = () => {
   const cursorOutline = useRef();
+  const animationFrame = useRef();
   const [hoverButton, setHoverButton] = useState(false);
 
   const animate = () => {
+    if (!cursorOutline.current) {
+      return;
+    }
+
     let distX = mouseX - outlineX;
     let distY = mouseY - outlineY;
 
@@ -20,44 +25,45 @@ export const Cursor = () => {
 
     cursorOutline.current.style.left = `${outlineX}px`;
     cursorOutline.current.style.top = `${outlineY}px`;
-    requestAnimationFrame(animate);
+    animationFrame.current = requestAnimationFrame(animate);
   };
 
   useEffect(() => {
-    const mouseEventsListener = document.addEventListener(
-      "mousemove",
-      function (event) {
-        mouseX = event.pageX;
-        mouseY = event.pageY;
-      }
-    );
-    const animateEvent = requestAnimationFrame(animate);
+    const handleMouseMove = (event) => {
+      mouseX = event.pageX;
+      mouseY = event.pageY;
+    };
+
+    document.addEventListener("mousemove", handleMouseMove);
+    animationFrame.current = requestAnimationFrame(animate);
+
     return () => {
-      document.removeEventListener("mousemove", mouseEventsListener);
-      cancelAnimationFrame(animateEvent);
+      document.removeEventListener("mousemove", handleMouseMove);
+      cancelAnimationFrame(animationFrame.current);
     };
   }, []);
 
   useEffect(() => {
-    const mouseEventListener = document.addEventListener(
-      "mouseover",
-      function (e) {
-        if (
-          e.target.tagName.toLowerCase() === "button" ||
-          // check parent is button
-          e.target.parentElement.tagName.toLowerCase() === "button" ||
-          // check is input or textarea
-          e.target.tagName.toLowerCase() === "input" ||
-          e.target.tagName.toLowerCase() === "textarea"
-        ) {
-          setHoverButton(true);
-        } else {
-          setHoverButton(false);
-        }
+    const handleMouseOver = (e) => {
+      const tagName = e.target.tagName?.toLowerCase();
+      const parentTagName = e.target.parentElement?.tagName?.toLowerCase();
+
+      if (
+        tagName === "button" ||
+        parentTagName === "button" ||
+        tagName === "input" ||
+        tagName === "textarea"
+      ) {
+        setHoverButton(true);
+      } else {
+        setHoverButton(false);
       }
-    );
+    };
+
+    document.addEventListener("mouseover", handleMouseOver);
+
     return () => {
-      document.removeEventListener("mouseover", mouseEventListener);
+      document.removeEventListener("mouseover", handleMouseOver);
     };
   }, []);
 

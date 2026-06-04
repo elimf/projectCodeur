@@ -7,14 +7,14 @@ import {
 import { useFrame, useThree } from "@react-three/fiber";
 import { animate, useMotionValue } from "framer-motion";
 import { motion } from "framer-motion-3d";
-import { useEffect, useRef, useState } from "react";
+import { memo, useEffect, useRef, useState } from "react";
 import { framerMotionConfig } from "../config";
 import { Avatar } from "./Avatar";
 import { Background } from "./Background";
 import { Office } from "./Office";
 import { Projects } from "./Projects";
 
-export const Experience = (props) => {
+export const Experience = memo((props) => {
   const { menuOpened } = props;
   const { viewport } = useThree();
   const data = useScroll();
@@ -39,7 +39,7 @@ export const Experience = (props) => {
   useEffect(() => {
     setCharacterAnimation("Falling");
 
-    setTimeout(() => {
+    const animationTimeout = setTimeout(() => {
       switch (section) {
         case 0:
           setCharacterAnimation("Typing");
@@ -60,6 +60,10 @@ export const Experience = (props) => {
           setCharacterAnimation("Standing");
       }
     }, 600);
+
+    return () => {
+      clearTimeout(animationTimeout);
+    };
   }, [section]);
 
   useFrame((state) => {
@@ -82,7 +86,7 @@ export const Experience = (props) => {
       <Background />
       <motion.group
         position={[1.9072935059634513, 0.14400000000000002, 2.681801948466054]}
-        rotation={[-3.141592653589793, 1.2053981633974482, 3.141592653589793]}
+        rotation={[-3.141592653589793, 9.2053981633974482, 3.141592653589793]}
         animate={"" + section}
         transition={{
           duration: 0.6,
@@ -94,27 +98,27 @@ export const Experience = (props) => {
             scaleZ: 0.9,
           },
           1: {
-            y: -viewport.height + 0.5,
+            y: -viewport.height + 0.9,
             x: 0,
-            z: 6,
+            z: 4,
             rotateX: 0,
-            rotateY: 0,
+            rotateY: 5,
             rotateZ: 0,
           },
           2: {
             y: -viewport.height * 2 + 0.5,
             x: 0,
-            z: 6,
+            z: 4,
             rotateX: 0,
-            rotateY: 0,
+            rotateY: 5,
             rotateZ: 0,
           },
           3: {
             x: -2,
             y: -viewport.height * 3 + 0.5,
-            z: 0,
+            z: 3,
             rotateX: 0,
-            rotateY: Math.PI / 2,
+            rotateY: -Math.PI / 2,
             rotateZ: 0,
           },
           4: {
@@ -122,7 +126,7 @@ export const Experience = (props) => {
             x: 0.3,
             z: 8.5,
             rotateX: 0,
-            rotateY:- Math.PI / 8,
+            rotateY: 5,
             rotateZ: 0,
           },
         }}
@@ -196,4 +200,4 @@ export const Experience = (props) => {
       <Projects />
     </>
   );
-};
+});
