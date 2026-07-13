@@ -49,6 +49,11 @@ export const translations = {
     },
     educationData: [
       {
+        title: "International Business Entrepreneurship Program in Quebec",
+        institution: "Universite Laval | Quebec (Canada)",
+        date: "May 2026 - July 2026",
+      },
+      {
         title:
           "Preparation Master Manager of computer engineering (option lead developer) BAC + 5",
         institution: "Coding Factory of ESIEE-IT | Cergy (95)",
@@ -142,6 +147,11 @@ export const translations = {
       error: "Erreur lors de l'envoi. Veuillez reessayer.",
     },
     educationData: [
+      {
+        title: "Programme Business Entrepreneuriat International au Quebec",
+        institution: "Universite Laval | Quebec (Canada)",
+        date: "Mai 2026 - Juillet 2026",
+      },
       {
         title:
           "Preparation au Master Manager de l'ingenierie informatique (option lead developer) BAC + 5",
