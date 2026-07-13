@@ -16,7 +16,6 @@ export function Avatar(props) {
     wireframe: false,
   });
   const group = useRef();
-  const currentAnimation = useRef();
   const { scene, materials } = useGLTF("models/model.glb");
   const avatar = React.useMemo(() => SkeletonUtils.clone(scene), [scene]);
 
@@ -70,23 +69,18 @@ export function Avatar(props) {
   });
 
   useEffect(() => {
-    if (currentAnimation.current === animation) {
-      return;
-    }
-
     const action = actions[animation];
 
     if (!action) {
       return;
     }
 
-    currentAnimation.current = animation;
     action.reset().fadeIn(0.5).play();
 
     return () => {
-      action.reset().fadeOut(0.5);
+      action.fadeOut(0.5);
     };
-  }, [animation]);
+  }, [actions, animation]);
 
   useEffect(() => {
     Object.values(materials || {}).forEach((material) => {
